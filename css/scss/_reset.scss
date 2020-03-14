@@ -40,14 +40,24 @@ img{
 }
 
 input::-webkit-input-placeholder {
-    color: #ccc;
+    color: #999999;
 }
 input::-moz-input-placeholder {
-    color: #ccc;
+    color: #999999;
 }
 input::-ms-input-placeholder {
-    color: #ccc;
+    color: #999999;
 }
+
+/*在谷歌下移除input[number]的上下箭头*/
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+/*在firefox下移除input[number]的上下箭头*/
+ input[type="number"]{-moz-appearance:textfield;}
+
 
 .clearfix{
 	*zoom:1;

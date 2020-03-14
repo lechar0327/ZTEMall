@@ -138,8 +138,6 @@ input[type="number"], .login-wrap .l-main .l-login .onfocus-input[type="number"]
 
 .copyright div a { color: #c2c2c2; }
 
-.active { color: #767676 !important; }
-
 .login-wrap { width: 100%; height: 650px; background: #f9f9f9; }
 
 .login-wrap .l-top { height: 40px; }
@@ -156,39 +154,39 @@ input[type="number"], .login-wrap .l-main .l-login .onfocus-input[type="number"]
 
 .login-wrap .l-top .t-right a:hover { color: #000; }
 
-.login-wrap .l-main { margin-top: 80px; }
+.login-wrap .l-main { height: 650px; margin-top: 40px; }
 
-.login-wrap .l-main .bigImg { width: 410px; height: 424px; margin-left: 182px; float: left; border-right: 1px solid #eee; }
+.login-wrap .l-main .bigImg { width: 410px; height: 424px; margin-top: 40px; margin-left: 182px; float: left; border-right: 1px solid #eee; }
 
 .login-wrap .l-main .bigImg img { width: 334px; height: 334px; }
 
 .login-wrap .l-main .l-login { float: left; width: 336px; height: 524px; padding: 0 80px; }
 
-.login-wrap .l-main .l-login .login-type { height: 28px; line-height: 28px; text-align: center; }
+.login-wrap .l-main .l-login .login-type { height: 28px; line-height: 28px; text-align: center; margin-bottom: 26px; }
 
-.login-wrap .l-main .l-login .login-type a { display: inline-block; font-size: 18px; color: #0194dc; vertical-align: middle; }
+.login-wrap .l-main .l-login .tips, .login-wrap .l-main .l-login .l-tab .m-require { position: absolute; width: 148px; height: 40px; line-height: 40px; border: 1px solid #808080; border-radius: 5px; top: 48px; left: 90px; z-index: 9; background: #fff; }
 
-.login-wrap .l-main .l-login .login-type .split-line { display: inline-block; height: 20px; width: 2px; margin: 0 18px; background: #d4cccc; vertical-align: middle; }
+.login-wrap .l-main .l-login .tips .angle, .login-wrap .l-main .l-login .l-tab .m-require .angle { position: absolute; top: -9px; left: 26px; }
 
-.login-wrap .l-main .l-login .vertical-split { width: 336px; height: 48px; line-height: 48px; }
-
-.login-wrap .l-main .l-login .vertical-split span { display: inline-block; width: 336px; height: 1px; background: #ebebeb; }
-
-.login-wrap .l-main .l-login .tips, .login-wrap .l-main .l-login .l-tab .m-require, .login-wrap .l-main .l-login .l-tab .a-require, .login-wrap .l-main .l-login .l-tab .e-require { position: absolute; width: 148px; height: 40px; line-height: 40px; border: 1px solid #808080; border-radius: 5px; top: 48px; left: 90px; z-index: 9; background: #fff; }
-
-.login-wrap .l-main .l-login .tips .angle, .login-wrap .l-main .l-login .l-tab .m-require .angle, .login-wrap .l-main .l-login .l-tab .a-require .angle, .login-wrap .l-main .l-login .l-tab .e-require .angle { position: absolute; top: -9px; left: 26px; }
-
-.login-wrap .l-main .l-login .tips .d-icon, .login-wrap .l-main .l-login .l-tab .m-require .d-icon, .login-wrap .l-main .l-login .l-tab .a-require .d-icon, .login-wrap .l-main .l-login .l-tab .e-require .d-icon { margin: 8px; }
+.login-wrap .l-main .l-login .tips .d-icon, .login-wrap .l-main .l-login .l-tab .m-require .d-icon { margin: 8px; }
 
 .login-wrap .l-main .l-login .l-tab { position: relative; }
 
 .login-wrap .l-main .l-login .v-input { position: relative; }
 
-.login-wrap .l-main .l-login .v-input .vcode { position: absolute; right: 16px; top: 10px; }
+.login-wrap .l-main .l-login .v-input .vcode { position: absolute; right: 92px; top: 10px; }
 
 .login-wrap .l-main .l-login .v-input .vcode img { cursor: pointer; }
 
-.login-wrap .l-main .l-login .v-input span { color: red; }
+.login-wrap .l-main .l-login #changeCode { margin-left: 6px; }
+
+.login-wrap .l-main .l-login #txtRcode { width: 252px; }
+
+.login-wrap .l-main .l-login .agreement { width: 334px; height: 70px; }
+
+.login-wrap .l-main .l-login .agreement #agree { width: 15px; height: 15px; vertical-align: middle; margin: 4px 8px 0; }
+
+.login-wrap .l-main .l-login .agreement span { display: inline-block; vertical-align: middle; }
 
 .login-wrap .l-main .l-login .m-input { position: relative; }
 
@@ -215,15 +213,3 @@ input[type="number"], .login-wrap .l-main .l-login .onfocus-input[type="number"]
 .login-wrap .l-main .l-login .member-login a:hover { color: #000; }
 
 .login-wrap .l-main .l-login .member-login #register { color: #1790d8; }
-
-.login-wrap .l-main .l-login .other-split { margin-top: 14px; height: 26px; position: relative; }
-
-.login-wrap .l-main .l-login .other-split hr { color: #d0d0d0; }
-
-.login-wrap .l-main .l-login .other-split .other-text { color: #787878; background: #f9f9f9; width: 92px; position: absolute; top: -8px; left: 120px; text-align: center; }
-
-.login-wrap .l-main .l-login .other-login { width: 334px; text-align: center; }
-
-.login-wrap .l-main .l-login .other-login a { margin: 0 14px; display: inline-block; width: 37px; height: 37px; }
-
-.login-wrap .l-main .l-login .other-login a img { width: 100%; height: 100%; }

@@ -1,11 +1,231 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>中兴商城-登录</title>
+    <link rel="stylesheet" href="css/login.css">
 </head>
+
 <body>
-    
+    <div class="login-wrap">
+        <div class="l-top container">
+            <div class="t-left">
+                <a href="https://www.myzte.com/appdownload.html">手机版</a>
+                <a href="https://www.myzte.com/qiye.html">企业采购</a>
+                <a href="https://www.myzte.com/n-35-alist.html">商城公告</a>
+                <a href="https://www.myzte.com/feedback-add.html">意见反馈</a>
+            </div>
+            <div class="t-right">
+                <a href="login.html">登录</a>
+                <a href="register.html">注册</a>
+            </div>
+        </div>
+        <div class="l-main">
+            <div class="bigImg">
+                <img src="images/login.png" alt="">
+            </div>
+            <div class="l-login">
+                <div class="login-type" lType="m">
+                    <a href="javascript:" class="active">短信登录</a>
+                    <span class="split-line"></span>
+                    <a href="javascript:">账号登录</a>
+                    <span class="split-line"></span>
+                    <a href="javascript:">员工登录</a>
+                </div>
+                <div class="vertical-split">
+                    <span></span>
+                </div>
+                <div class="m-login l-tab" style="display: block;">
+                    <div class="a-input">
+                        <input type="number" id="txtmAccount" maxlength="11" placeholder="手机号">
+                    </div>
+                    <div class="v-input">
+                        <input type="type" maxlength=4 id="txtmVcode" placeholder="图形验证码">
+                        <div class="vcode">
+                            <img id="mImgCode" src="" alt="验证码" title="验证码">
+                        </div>
+                    </div>
+                    <div class="m-input">
+                        <input type="number" maxlength="6" id="txtmsgVcode" name="" placeholder="短信验证码">
+                        <div class="mcode">
+                            <a id="getMcode" href="javascript:">获取短信验证码</a>
+                        </div>
+                    </div>
+                    <div class="m-require" style="display: none;">
+                        <img class="angle" src="images/danger01.jpg" alt="">
+                        <img class="d-icon" src="images/danger02.jpg" alt="">
+                        <span>请填写此字段</span>
+                    </div>
+                </div>
+                <div class="a-login l-tab" style="display: none;">
+                    <div class="a-input">
+                        <input type="text" id="txtaAccount" placeholder="手机号 / 邮箱 / 用户名">
+                    </div>
+                    <div class="p-input">
+                        <input type="password" id="txtPwd" name="" id="" placeholder="密码">
+                    </div>
+                    <div class="v-input">
+                        <input type="text" id="txtVcode" placeholder="图形验证码">
+                        <div class="vcode">
+                            <img src="" id="aImgCode" alt="">
+                        </div>
+                    </div>
+                    <div class="a-require" style="display: none;">
+                        <img class="angle" src="images/danger01.jpg" alt="">
+                        <img class="d-icon" src="images/danger02.jpg" alt="">
+                        <span>请填写此字段</span>
+                    </div>
+                </div>
+                <div class="e-login l-tab" style="display: none;">
+                    <div class="a-input">
+                        <input type="text" id="txteAccount" placeholder="工号">
+                    </div>
+                    <div class="p-input">
+                        <input type="password" id="txtEPwd" name="" id="" placeholder="密码">
+                    </div>
+                    <div class="v-input">
+                        <input type="text" id="txtEVcode" placeholder="员工账号动态码(在手机安全令牌中查看)">
+                        <span>&nbsp;&nbsp;根据公司信息安全要求，员工账号必须填写动态码</span>
+                    </div>
+                    <div class="e-require" style="display: none;">
+                        <img class="angle" src="images/danger01.jpg" alt="">
+                        <img class="d-icon" src="images/danger02.jpg" alt="">
+                        <span>请填写此字段</span>
+                    </div>
+                </div>
+                <div class="b-btn">
+                    <button class="btnLogin" id="btnLogin">登录</button>
+                </div>
+
+
+
+                <div class="msginfo" style="display: none;">
+
+                </div>
+                <div class="member-login">
+                    <a href="#" id="register">立即注册</a>
+                    <a href="#">忘记密码?</a>
+                </div>
+                <div class="other-split">
+                    <hr>
+                    <div class="other-text">
+                        三方账号登录
+                    </div>
+                </div>
+
+                <div class="other-login">
+                    <a href="#" class="wechat">
+                        <img src="images/wechat.png" alt="">
+                    </a>
+                    <a href="#" class="sina">
+                        <img src="images/weibo.png" alt="">
+                    </a>
+                    <a href="#" class="qq">
+                        <img src="images/qq.png" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-wrap">
+        <div class="m-service">
+            <div class="service">
+                <img src="images/7.png" alt="">
+                <span>7天退货保障</span>
+            </div>
+            <div class="service">
+                <img src="images/30.png" alt="">
+                <span>15天换货承诺</span>
+            </div>
+            <div class="service">
+                <img src="images/mian.png" alt="">
+                <span>150元起全场免运费</span>
+            </div>
+            <div class="service">
+                <img src="images/position.png" alt="">
+                <span>全国售后服务点</span>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="ft-main">
+            <div class="f-service">
+                <dl>
+                    <dt><a href="javascript:">关注我们</a></dt>
+                    <dd><a href="https://www.myzte.com/help-14.html">中兴社区</a> </dd>
+                    <dd><a href="https://www.myzte.com/help-13.html">官方微信</a></dd>
+                    <dd><a href="https://www.myzte.com/help-12.html">新浪微博</a></dd>
+                </dl>
+
+                <dl>
+                    <dt><a href="javascript:">帮助中心</a></dt>
+                    <dd><a href="https://www.myzte.com/help-11.html">支付方式</a></dd>
+                    <dd><a href="https://www.myzte.com/help-10.html">购物指南</a></dd>
+                    <dd><a href="https://www.myzte.com/help-9.html">配送指南</a></dd>
+                </dl>
+
+                <dl>
+                    <dt><a href="javascript:">售后服务</a></dt>
+                    <dd><a href="https://www.myzte.com/help-8.html">退换货流程</a></dd>
+                    <dd><a href="https://www.myzte.com/help-7.html">售后网点</a></dd>
+                    <dd><a href="https://www.myzte.com/help-6.html">退换货政策</a></dd>
+                    <dd><a href="https://www.myzte.com/help-5.html">保修政策</a></dd>
+                </dl>
+
+                <dl>
+                    <dt><a href="javascript:">关于商城</a></dt>
+                    <dd><a href="https://www.myzte.com/help-4.html">联系我们</a></dd>
+                    <dd><a href="https://www.myzte.com/help-3.html">商城简介</a></dd>
+                    <dd><a href="https://www.myzte.com/help-2.html">礼品团购</a></dd>
+                </dl>
+            </div>
+            <div class="f-kefu">
+                <div class="f-connect">
+                    <a href="javascript:">
+                        <img src="images/kefu.png" alt="">
+                        在线客服
+                    </a>
+                    <p>电话热线: 400-880-9999转7</p>
+                    <p>周一到周日 9:00 - 24:00 (全年无休)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="copyright">
+        <p>
+            <a href="http://www.myzte.cn" target="_blank">中兴社区</a>
+            <span>|</span>
+            <a href="http://www.myzte.cn" target="_blank">中兴通讯</a>
+            <span>|</span>
+            <a href="http://www.myzte.cn" target="_blank">汇天地</a>
+            <span>|</span>
+            <a href="http://www.myzte.cn" target="_blank">中兴云服务</a>
+            <span>|</span>
+            <a href="http://www.myzte.cn" target="_blank">中兴手机</a>
+        </p>
+        <div>
+            <a href="https://www.myzte.com/help-20.html" target="_blank">服务协议</a> |
+            <a href="https://www.myzte.com/help-132.html" target="_blank">隐私政策</a>|
+            <span>©2014 - 2017 深圳市中兴智谷科技有限公司版权所有，并保留所有权利</span>
+        </div>
+        <div>
+            <span>增值电信业务经营许可证：粤B2-20160352 | </span>
+            <a href="http://www.beian.miit.gov.cn/" target="_blank">ICP备案证书号 :粤ICP备16018970号</a> |
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030502001132" target="_blank"> 粤公网安备
+                44030502001132号</a> |
+            <a href="https://szcert.ebs.org.cn/a9204ea8-5ab3-4787-b13b-0d9d4421a904" target="_blank">
+                <img src="https://szcert.ebs.org.cn/Images/govIcon.gif" title="深圳市市场监督管理局企业主体身份公示"
+                    alt="深圳市市场监督管理局企业主体身份公示" width="26" height="36" border="0"
+                    style="border-width:0px;border:hidden; border:none;">
+            </a>
+        </div>
+
+    </div>
+    <script src="js/require.js" async="true" defer data-main="js/login.main.js"></script>
+
 </body>
+
 </html>

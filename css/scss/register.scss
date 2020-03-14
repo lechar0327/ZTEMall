@@ -1,11 +1,6 @@
 @import "reset";
 @import "base";
 
-
-.active{
-    color:#767676 !important;
-}
-
 .login-wrap{
     width:100%;
     height: 650px;
@@ -39,10 +34,12 @@
 
     .l-main{
         @extend .container;
-        margin-top: 80px;
+        height: 650px;
+        margin-top: 40px;
         .bigImg{
             width: 410px;
             height: 424px;
+            margin-top:40px;
             margin-left: 182px;
             float: left;
             border-right: 1px solid #eee;
@@ -60,35 +57,10 @@
             .login-type{
                 height: 28px;
                 line-height: 28px;
-                text-align: center;
-                a{
-                    display: inline-block;
-                    font-size: 18px;
-                    color:#0194dc;
-                    vertical-align: middle;
-                }
+                text-align: center; 
+                margin-bottom: 26px;
+            }
 
-                .split-line{
-                    display: inline-block;
-                    height: 20px;
-                    width: 2px;
-                    margin:0 18px;
-                    background: #d4cccc;
-                    vertical-align: middle;
-                }
-            }
-            .vertical-split{
-                width: 336px;
-                height: 48px;
-                line-height: 48px;
-                span{
-                    display: inline-block;
-                    width: 336px;
-                    height: 1px;
-                    background: #ebebeb;
-                }
-            }
-            
             .tips{
                 position: absolute;
                 width:148px;
@@ -115,29 +87,41 @@
                 .m-require{
                     @extend .tips;
                 }
-                .a-require{
-                    @extend .tips;
-                }
-                .e-require{
-                    @extend .tips;
-                }
             }
 
             .v-input{
                 position: relative;
                 .vcode{
                     position: absolute;
-                    right: 16px;
+                    right: 92px;
                     top:10px;
                     img{
                         cursor: pointer;
                     }
                 }
-                span{
-                    color:red;
-                }
+            }
+            #changeCode{
+                margin-left: 6px;
+            }
+            #txtRcode{
+                width: 252px;
             }
 
+            .agreement{
+                width:334px;
+                height: 70px;
+                #agree{
+                    width: 15px;
+                    height: 15px;
+                    vertical-align: middle;
+                    margin:4px 8px 0;
+                }
+                span{
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+            }
+           
             .m-input{
                 position: relative;
                 .mcode{
@@ -172,8 +156,11 @@
             }
             .onfocus-input{
                 @extend input;
+         
                 border-color: #9ecaed;
                 box-shadow: 0 0 10px #9ecaed;
+                // border-color: #a94442;
+                // box-shadow: 0 0 10px #a94442;
             }
             .onblur-input {
                 @extend input;
@@ -182,6 +169,8 @@
             input:focus {
                 border-color: #9ecaed;
                 box-shadow: 0 0 10px #9ecaed;
+                // border-color: #a94442;
+                // box-shadow: 0 0 5px #a94442;
             }
         
             button{
@@ -224,37 +213,6 @@
                 }
             }
 
-            .other-split{
-                margin-top: 14px;
-                height: 26px;
-                position: relative;
-                hr{
-                    color:#d0d0d0;
-                }
-                .other-text{
-                    color :#787878;
-                    background:#f9f9f9;
-                    width: 92px;
-                    position: absolute;
-                    top:-8px;
-                    left:120px;
-                    text-align: center;
-                }
-            }
-            .other-login{
-                width: 334px;
-                text-align: center;
-                a{
-                    margin: 0 14px;
-                    display: inline-block;
-                    width: 37px;
-                    height: 37px;
-                    img{
-                        width: 100%;
-                        height: 100%;
-                    }
-                }
-            }
         }
     }
 

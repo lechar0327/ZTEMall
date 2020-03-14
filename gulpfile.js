@@ -48,16 +48,6 @@ gulp.task("copycss", function () {
         .pipe(connect.reload());
 });
 
-// //打包重置的css
-// gulp.task("resetscss", function () {
-//     return gulp.src("css/scss/_reset.{sass,scss}")
-//         .pipe(scss())
-//         .pipe(gulp.dest("dist/css"))
-//         .pipe(minifyCss())
-//         .pipe(rename("reset.min.css"))
-//         .pipe(gulp.dest("dist/css"))
-//         .pipe(connect.reload());
-// })
 
 //打包处理登录页面的css
 gulp.task("loginscss", function () {
@@ -70,6 +60,29 @@ gulp.task("loginscss", function () {
         .pipe(connect.reload());
 })
 
+//打包处理注册页面的css
+gulp.task("registerscss", function () {
+    return gulp.src("css/scss/register.{sass,scss}")
+        .pipe(scss({ outputStyle: 'compact' }).on('error', handleErrors)) // 用我们自己写的handleErrors替代处理错误
+        .pipe(gulp.dest("dist/css"))
+        .pipe(minifyCss())
+        .pipe(rename("register.min.css"))
+        .pipe(gulp.dest("dist/css"))
+        .pipe(connect.reload());
+})
+
+//打包处理首页的css
+gulp.task("indexscss", function () {
+    return gulp.src("css/scss/index.{sass,scss}")
+        .pipe(scss({ outputStyle: 'compact' }).on('error', handleErrors)) // 用我们自己写的handleErrors替代处理错误
+        .pipe(gulp.dest("dist/css"))
+        .pipe(minifyCss())
+        .pipe(rename("index.min.css"))
+        .pipe(gulp.dest("dist/css"))
+        .pipe(connect.reload());
+})
+
+
 
 
 // gulp.task("copyshop",function(){
@@ -80,22 +93,40 @@ gulp.task("loginscss", function () {
 //     .pipe(connect.reload());
 // });
 
+// 打包所有js到dist目录
 gulp.task("copyJs", function () {
     return gulp.src(["js/*.js", "!gulpfile.js", "!handleErrors.js"])
         .pipe(gulp.dest("dist/js"))
         .pipe(connect.reload());
 });
 
-
+//登录JS
 gulp.task("copyloginJs",function(){
-   return gulp.src("js/login.js")
+   return gulp.src("js/login.main.js")
    .pipe(gulp.dest("dist/js"))
    .pipe(uglify())
-   .pipe(rename("login.min.js"))
+   .pipe(rename("login.main.min.js"))
    .pipe(gulp.dest("dist/js"))
    .pipe(connect.reload());
 });
-
+//注册JS
+gulp.task("copyregisterJs",function(){
+    return gulp.src("js/register.main.js")
+    .pipe(gulp.dest("dist/js"))
+    .pipe(uglify())
+    .pipe(rename("register.main.min.js"))
+    .pipe(gulp.dest("dist/js"))
+    .pipe(connect.reload());
+ });
+ //首页JS
+ gulp.task("copyindexJs",function(){
+    return gulp.src("js/index.main.js")
+    .pipe(gulp.dest("dist/js"))
+    .pipe(uglify())
+    .pipe(rename("index.main.min.js"))
+    .pipe(gulp.dest("dist/js"))
+    .pipe(connect.reload());
+ });
 
 gulp.task("build", [
     "copyhtml",
@@ -103,10 +134,12 @@ gulp.task("build", [
     "copydata",
     "copycss",
     "loginscss",
+    "registerscss",
     "copyJs",
-    // "resetscss"
+    "copyregisterJs",
     "copyloginJs",
-    // "scssAll"
+    "copyindexJs",
+    "indexscss"
     ], function () {
         console.log("全部构建成功");
     });
@@ -119,11 +152,13 @@ gulp.task("watch", function () {
     gulp.watch("images/**/*", ["copyimages"]);
     gulp.watch("data/*.json", ["copydata"]);
     gulp.watch("css/*.css", ["copycss"]);
-    // gulp.watch("css/scss/_reset.{sass,scss}", ["resetscss"]);
     gulp.watch("css/scss/login.{sass,scss}", ["loginscss"]);
+    gulp.watch("css/scss/register.{sass,scss}", ["registerscss"]);
+    gulp.watch("css/scss/index.{sass,scss}", ["indexscss"]);
     gulp.watch(["js/*.js"], ["copyJs"]);
-    gulp.watch("js/login.js", ["copyloginJs"]);
-  
+    gulp.watch("js/login.main.js", ["copyloginJs"]);
+    gulp.watch("js/register.main.js", ["copyregisterJs"]);
+    gulp.watch("js/index.main.js", ["copyindexJs"]);
 });
 
 
@@ -134,7 +169,7 @@ gulp.task("server", function () {
         root: "dist",//指定服务器的根目录
         port: 9998,
         livereload: true,//启动实时刷新
-        fallback: 'login.html' //默认启动文件
+        fallback: 'web/home.html' //默认启动文件
     });
 });
 

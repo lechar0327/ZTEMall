@@ -4,12 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>中兴手机商城首页</title>
-    <link rel="stylesheet" href="css/index.min.css">
+    <title>注册</title>
+    <link rel="stylesheet" href="css/register.css">
 </head>
 
 <body>
-    <div class="index-wrap">
+    <div class="login-wrap">
         <div class="l-top container">
             <div class="t-left">
                 <a href="https://www.myzte.com/appdownload.html">手机版</a>
@@ -20,70 +20,91 @@
             <div class="t-right">
                 <a href="login.html">登录</a>
                 <a href="register.html">注册</a>
-                <a href="register.html" class="shopcart">
-                    <img src="images/shopcart.png" alt="">&nbsp;
-                    购物车
-                </a>
-                <div class="cartTips" style="display: none;">
-                    购物车中还没有商品,快快选购吧! <img src="images/smile.png" alt="">
+            </div>
+        </div>
+        <div class="l-main">
+            <div class="bigImg">
+                <img src="images/login.png" alt="">
+            </div>
+            <div class="l-login">
+                <div class="login-type" lType="m">
+                    <h1>欢迎注册</h1>
                 </div>
+                <div class="m-login l-tab">
+                    <div class="a-input">
+                        <input type="number" id="txtPhone" maxlength="11" placeholder="仅支持手机号">
+                    </div>
+                    <div class="p-input">
+                        <input type="password" id="txtPwd" name="" placeholder="登录密码">
+                    </div>
+                    <div class="p-input">
+                        <input type="password" id="txtRePwd" name="" placeholder="再次输入登录密码">
+                    </div>
+                    <div class="v-input">
+                        <input type="type" maxlength=4 id="txtRcode" placeholder="验证码">
+                        <div class="vcode">
+                            <img id="rImgCode" src="" alt="验证码" title="验证码">
+                        </div>
+                        <a id="changeCode" href="javasript:">更换验证码</a>
+                    </div>
+                    <div class="m-input">
+                        <input type="number" maxlength="6" id="txtmsgVcode" name="" placeholder="短信验证码">
+                        <div class="mcode">
+                            <a id="getMcode" href="javascript:">获取短信验证码</a>
+                        </div>
+                    </div>
+                    <div class="m-require" style="display: none;">
+                        <img class="angle" src="images/danger01.jpg" alt="">
+                        <img class="d-icon" src="images/danger02.jpg" alt="">
+                        <span>请填写此字段</span>
+                    </div>
+                </div>
+
+                <div class="agreement">
+                    <input type="checkbox" name="" id="agree">
+                    <span>已阅读并同意中兴商城
+                        《<a href="#">服务协议</a>》和 
+                        《<a href="#">隐私政策</a>》
+                     </span>
+                </div>
+
+                <div class="b-btn">
+                    <button class="btnRegister" id="btnRegister">立即注册</button>
+                </div>
+
+                <div class="msginfo" style="display: none;">
+
+                </div>
+                <div class="member-login">
+                    
+                    <a href="javascript:">已有账号?</a>
+                    <a href="login.html" id="login">立即登录</a>
+                </div>
+
+
             </div>
         </div>
     </div>
-
-    <div class="nav-wrap">
-        <div class="i-nav container">
-            <div class="logo">
-                <a href="index.html">中兴手机商城</a>
+    <div class="main-wrap">
+        <div class="m-service">
+            <div class="service">
+                <img src="images/7.png" alt="">
+                <span>7天退货保障</span>
             </div>
-            <div class="nav">
-                <ul>
-                    <li><a href="#">首页</a> </li>
-                    <li><a href="#">Axon系列</a></li>
-                    <li><a href="#">Blade系列</a></li>
-                    <li><a href="#">Nubia</a></li>
-                    <li><a href="#">服务</a></li>
-                    <li><a href="#">中兴社区</a></li>
-                </ul>
+            <div class="service">
+                <img src="images/30.png" alt="">
+                <span>15天换货承诺</span>
             </div>
-            <div class="search">
-                <input type="text" placeholder="天机Axon 10 Pro">
-                <button id="btnSearch">
-                    <img src="images/Search.fdj.png" alt="">
-                </button>
+            <div class="service">
+                <img src="images/mian.png" alt="">
+                <span>150元起全场免运费</span>
+            </div>
+            <div class="service">
+                <img src="images/position.png" alt="">
+                <span>全国售后服务点</span>
             </div>
         </div>
     </div>
-
-    <div class="banner-wrap">
-        <div class="banner-inner">
-            <ul>
-                <li><a href="#"><img src="../images/banner01.jpg" alt=""></a></li>
-                <li><a href="#"><img src="../images/banner02.jpg" alt=""></a></li>
-                <li><a href="#"><img src="../images/banner03.jpg" alt=""></a></li>
-                <li><a href="#"><img src="../images/banner04.jpg" alt=""></a></li>
-                <li><a href="#"><img src="../images/banner05.jpg" alt=""></a></li>
-            </ul>
-
-            <div class="leftnav">
-
-            </div>
-        </div>
-    </div>
-
-    <div class="hot-wrap">
-        <div class="h-main">
-            <div class="hot-title">
-                <h2>今日推荐</h2>
-                <em>热销单品</em>
-            </div>
-            <div class="hot-goods">
-                <a href="#"><img src="images/hot01.jpg" alt=""></a>
-                <a href="#"><img src="images/hot02.jpg" alt=""></a>
-            </div>
-        </div>
-    </div>
-
     <div class="footer">
         <div class="ft-main">
             <div class="f-service">
@@ -159,7 +180,7 @@
         </div>
 
     </div>
-    <script src="js/require.js" async="true" defer data-main="js/index.main.js"></script>
+    <script src="js/require.js" async="true" defer data-main="js/register.main.js"></script>
 </body>
 
 </html>
