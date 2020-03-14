@@ -1,0 +1,21 @@
+[{
+	"bannerId": 10001,
+	"imgSrc": "../images/banner01.jpg",
+	"linkAddress": "https://www.myzte.com/A7s.html"
+}, {
+	"bannerId": 10002,
+	"imgSrc": "../images/banner02.jpg",
+	"linkAddress": "https://www.myzte.com/A7s.html"
+}, {
+	"bannerId": 10003,
+	"imgSrc": "../images/banner03.jpg",
+	"linkAddress": "https://www.myzte.com/A7s.html"
+}, {
+	"bannerId": 10004,
+	"imgSrc": "../images/banner04.jpg",
+	"linkAddress": "https://www.myzte.com/A7s.html"
+}, {
+	"bannerId": 10005,
+	"imgSrc": "../images/banner05.jpg",
+	"linkAddress": "https://www.myzte.com/A7s.html"
+}]
