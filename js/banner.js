@@ -13,6 +13,11 @@
 *                oImgWidth: null,//banner图片的宽度,null值铺满横屏
 *                active: "active",//当前数字轮播切换的样式
 *                data: msg   //轮播图数据
+                    数据格式:  [{
+                                "bannerId": 10001,
+                                "imgSrc": "../images/banner01.jpg",
+                                "linkAddress": "https://www.myzte.com/A7s.html"
+                               }]
 *            }
 *            banner.Init(options);      
 */
@@ -71,7 +76,7 @@ define(function () {
             var oAs = document.createElement("a");
             oAs.href = data[i].linkAddress;
             oAs.target = "_blank";
-
+            oAs.id = data[i].bannerId;
             var oImg = document.createElement("img");
             oImg.src = data[i].imgSrc;
             //让图片充满整个横屏
@@ -142,7 +147,7 @@ define(function () {
         //(结束的长度 -起始位置)/最大步长=每次走多少步
         var everyStep = (end - start) / maxStep;
         clearInterval(timer1);
-        timer1 = setInterval(() => {
+        timer1 = setInterval(function(){
             minStep++;
             //步数走完之后清除定时器
             if (minStep >= maxStep) {
@@ -160,7 +165,7 @@ define(function () {
     function autoMove() {
         clearInterval(timer2);
         //每3秒轮播
-        timer2 = setInterval(() => {
+        timer2 = setInterval(function() {
             // 图片索引累加
             indexImg++;
             //等于图片数量 长度之后
@@ -172,7 +177,6 @@ define(function () {
             }
             startMove();
             // 清除上一个图片的数字切换样式
-            console.log(oNums);
 
             oNums[indexNum].className = "";
 
@@ -182,12 +186,12 @@ define(function () {
             }
             //添加当前数字的样式
             oNums[indexNum].className = active;
-        }, 2000);
+        }, 3000);
     }
 
     //点击数字切换
     function numTab() {
-        for (let i = 0; i < oNums.length; i++) {
+        for (var i = 0; i < oNums.length; i++) {
 
             oNums[i].index = i;
             oNums[i].onclick = function () {
@@ -205,18 +209,6 @@ define(function () {
 
         }
     }
-
-    // ul.onclick = function (ev) {
-    //     var e = ev || window.event;
-    //     var target = e.target || window.event.srcElement;
-    //     // alert("点击的标签是:" + target.tagName + "," + "标签中内容是:" + target.innerHTML);
-    //     // alert("当前输出的是this内容:" + this.tagName);
-
-    //     // 点击li,给li加背景颜色(使用委托)
-    //     if (target.tagName.toLowerCase() == "li") {
-    //         target.style.backgroundColor = "red";
-    //     }
-    // }
 
     function RightLeftTab() {
         //点击左按钮切换

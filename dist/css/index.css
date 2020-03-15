@@ -188,7 +188,7 @@ input[type="number"] { -moz-appearance: textfield; }
 
 .banner-wrap { width: 100%; position: relative; }
 
-.banner-wrap .banner-inner { overflow-x: hidden; }
+.banner-wrap .banner-inner { height: 480px; overflow-x: hidden; }
 
 .banner-wrap .banner-inner ul { width: 12000px; height: 480px; overflow: hidden; }
 
@@ -196,7 +196,31 @@ input[type="number"] { -moz-appearance: textfield; }
 
 .banner-wrap .banner-inner ul li a img { width: 100%; height: 100%; }
 
-.banner-wrap .leftnav { margin-left: 100px; width: 250px; height: 480px; position: absolute; top: 0px; left: 50px; z-index: 10; background-color: rgba(248, 247, 247, 0.8); }
+.banner-wrap .leftnav { margin-left: 100px; width: 250px; height: 480px; position: absolute; top: 0px; left: 0px; z-index: 10; background-color: rgba(248, 247, 247, 0.8); }
+
+.banner-wrap .leftnav .navwrap > li { color: #333; padding: 13px 20px 13px 22px; box-sizing: border-box; margin: 0; height: 68.5px; overflow: hidden; }
+
+.banner-wrap .leftnav .navwrap > li h2 { color: inherit; padding-bottom: 8px; }
+
+.banner-wrap .leftnav .navwrap > li h2 a { color: #333333; }
+
+.banner-wrap .leftnav .navwrap > li ul li { float: left; margin: 0 10px 5px 0 !important; line-height: normal; }
+
+.banner-wrap .leftnav .navwrap > li .goods-block { width: 320px; height: 480px; background: #fff; position: absolute; top: 0; left: 250px; }
+
+.banner-wrap .leftnav .navwrap > li .goods-block ul { width: 320px; padding: 3px 15px; }
+
+.banner-wrap .leftnav .navwrap > li .goods-block ul li { float: left; }
+
+.banner-wrap .leftnav .navwrap > li .goods-block ul li .goods-img { width: 50px; height: 66px; line-height: 66px; display: inline-block; float: left; text-align: center; }
+
+.banner-wrap .leftnav .navwrap > li .goods-block ul li .goods-img img { max-width: 50px; max-height: 66px; vertical-align: middle; margin-top: 0; }
+
+.banner-wrap .leftnav .navwrap > li .goods-block ul li .goods-title { display: inline-block; line-height: 66px; margin-left: 20px; overflow: hidden; float: left; }
+
+.banner-wrap .leftnav .navwrap > li .goods-block ul li .goods-title a:hover { color: #fc6628; }
+
+.banner-wrap .leftnav .navwrap > li:hover { background: #fff; }
 
 .banner-wrap .active-num { position: absolute; top: 435px; right: 388px; z-index: 99; }
 

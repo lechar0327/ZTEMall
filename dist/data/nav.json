@@ -1,0 +1,221 @@
+[
+    {
+        "catId": 1,
+        "categoryName": "手机",
+        "parentCatId":0,
+        "imgsrc":"",
+        "childs": [
+            {
+                "catId": 2,
+                "typeName": "天机系列",
+                "parentCatId": 1,
+                "imgsrc":"//image.myzte.com/59/bc/b6992bba7b0d.jpg?78210_H750_W750",
+                "isShow":true
+            },
+            {
+                "catId": 3,
+                "typeName": "Blade系列",
+                "parentCatId": 1,
+                "imgsrc":"//image.myzte.com/03/1c/173f97483d18.png?78235_H750_W750",
+                "isShow":true
+            },
+            {
+                "catId": 4,
+                "typeName": "远航系列",
+                "parentCatId": 1,
+                "imgsrc":"//image.myzte.com/b3/a3/a53719f59ad4.png?17669_H800_W800",
+                "isShow":false
+            },
+            {
+                "catId": 5,
+                "typeName": "其它手机",
+                "parentCatId": 1,
+                "imgsrc":"//image.myzte.com/15/9a/9b5232e00240.jpg?17736_H800_W800",
+                "isShow":false
+            }
+        ]
+    },
+    {
+        "catId": 6,
+        "categoryName": "智能终端",
+        "parentCatId":0,
+        "imgsrc":"",
+        "childs": [
+            {
+                "catId": 7,
+                "typeName": "便携投影",
+                "parentCatId": 6,
+                "imgsrc":"//image.myzte.com/45/90/96536abaafa8.jpg?39591_H800_W800",
+                "isShow":true
+            },
+            {
+                "catId": 8,
+                "typeName": "智能穿戴",
+                "parentCatId": 6,
+                "imgsrc":"//image.myzte.com/c4/30/37450cccf1f8.jpg?39614_H800_W800",
+                "isShow":true
+            },
+            {
+                "catId": 9,
+                "typeName": "网络盒子",
+                "parentCatId": 6,
+                "imgsrc":"//image.myzte.com/41/fb/f11422f22d99.jpg?39697_H800_W800",
+                "isShow":true
+            },
+            {
+                "catId": 10,
+                "typeName": "智能家居",
+                "parentCatId": 6,
+                "imgsrc":"//image.myzte.com/ec/2a/22cb1a263913.jpg?74072_H118_W118",
+                "isShow":false
+            }
+        ]
+    },
+    {
+        "catId": 11,
+        "categoryName": "耳机 / 音箱",
+        "parentCatId":0,
+        "imgsrc":"",
+        "childs": [
+            {
+                "catId": 12,
+                "typeName": "蓝牙耳机",
+                "parentCatId": 11,
+                "imgsrc":"//image.myzte.com/fb/9e/9ab595bbcb60.jpg?39849_H800_W800",
+                "isShow":true
+            },
+            {
+                "catId": 13,
+                "typeName": "蓝牙音箱",
+                "parentCatId": 6,
+                "imgsrc":"//image.myzte.com/07/0d/0f74ab6e6f8d.jpg?39875_H800_W800",
+                "isShow":true
+            },
+            {
+                "catId": 14,
+                "typeName": "有线耳机",
+                "parentCatId": 6,
+                "imgsrc":"//image.myzte.com/2d/11/17dbec03b103.jpg?39898_H800_W800",
+                "isShow":true
+            }
+        ]
+    },
+    {
+        "catId": 15,
+        "categoryName": "数据线 / 电源适配器",
+        "parentCatId":0,
+        "imgsrc":"",
+        "childs": [
+            {
+                "catId": 16,
+                "typeName": "充电器",
+                "parentCatId": 15,
+                "imgsrc":"//image.myzte.com/a7/6f/677579ae5950.jpg?39935_H800_W800",
+                "isShow":true
+            },
+            {
+                "catId": 17,
+                "typeName": "数据线",
+                "parentCatId": 15,
+                "imgsrc":"//image.myzte.com/db/a5/a1b6aa25754e.jpg?40018_H800_W800",
+                "isShow":true
+            },
+            {
+                "catId": 18,
+                "typeName": "车载充电",
+                "parentCatId": 15,
+                "imgsrc":"//image.myzte.com/f2/ae/ad28ac10488c.jpg?40064_H800_W800",
+                "isShow":true
+            }
+        ]
+    },
+    {
+        "catId": 19,
+        "categoryName": "保护套 / 后盖 / 贴膜",
+        "parentCatId":0,
+        "imgsrc":"",
+        "childs": [
+            {
+                "catId": 20,
+                "typeName": "皮套",
+                "parentCatId": 19,
+                "imgsrc":"//image.myzte.com/c2/87/8f2fe502a64a.jpg?40166_H800_W800",
+                "isShow":true
+            },
+            {
+                "catId": 21,
+                "typeName": "贴膜",
+                "parentCatId": 19,
+                "imgsrc":"//image.myzte.com/4b/ea/edbc02e5696e.jpg?40308_H800_W800",
+                "isShow":true
+            },
+            {
+                "catId": 22,
+                "typeName": "保护袋",
+                "parentCatId": 19,
+                "imgsrc":"//image.myzte.com/e8/39/358d5973b4b5.jpg?40343_H800_W800",
+                "isShow":true
+            },
+            {
+                "catId": 23,
+                "typeName": "Axon M专用配件",
+                "parentCatId": 19,
+                "imgsrc":"//image.myzte.com/c9/53/5f98c910af6b.jpg?27135_H235_W235",
+                "isShow":false
+            }
+        ]
+    },
+    {
+        "catId": 24,
+        "categoryName": "移动电源/存储卡",
+        "parentCatId":0,
+        "imgsrc":"",
+        "childs": [
+            {
+                "catId": 25,
+                "typeName": "存储卡",
+                "parentCatId": 24,
+                "imgsrc":"//image.myzte.com/6a/d1/daaeac7ae7ff.jpg?40405_H800_W800",
+                "isShow":true
+            },
+            {
+                "catId": 26,
+                "typeName": "读卡器",
+                "parentCatId": 24,
+                "imgsrc":"//image.myzte.com/6b/9c/9fb050739492.jpg?40451_H800_W800",
+                "isShow":true
+            },
+            {
+                "catId": 27,
+                "typeName": "移动电源",
+                "parentCatId": 24,
+                "imgsrc":"//image.myzte.com/74/b3/b840e47df03e.jpg?40472_H800_W800",
+                "isShow":true
+            }
+        ]
+    },
+    {
+        "catId": 28,
+        "categoryName": "服务及周边",
+        "parentCatId":0,
+        "imgsrc":"",
+        "childs": [
+            {
+                "catId": 29,
+                "typeName": "车载支架",
+                "parentCatId": 28,
+                "imgsrc":"//image.myzte.com/36/8e/8c69cba2febb.jpg?40528_H800_W800",
+                "isShow":true
+            },
+            {
+                "catId": 30,
+                "typeName": "自拍杆",
+                "parentCatId": 28,
+                "imgsrc":"//image.myzte.com/b6/cd/c367cce3dacf.jpg?40554_H800_W800",
+                "isShow":true
+            }
+        ]
+    }
+    
+    
+]

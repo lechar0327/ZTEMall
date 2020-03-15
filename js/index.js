@@ -229,8 +229,30 @@ define(["ajax"], function ($) {
         autoMove();
     }
 
-    return {
-        loadBannerData: loadBannerData
+    //获取热点图,今日推荐
+    function getHot() {
+        var oHotGoods = document.querySelector(".hot-goods");
+        $.ajax({
+            type: "get",
+            url: "data/hot.json",
+            data: {},
+            success: function (msg) {
+                var data = JSON.parse(msg);
+                for (var i = 0; i < data.length; i++) {
+                    var oA = document.createElement("a");
+                    oA.href = data[i].link;
 
+                    var oI = document.createElement("img");
+                    oI.src = data[i].imgsrc;
+
+                    oA.appendChild(oI);
+                    oHotGoods.appendChild(oA);
+                }
+            }
+        });
+    }
+    return {
+        loadBannerData: loadBannerData,
+        getHot: getHot
     }
 });

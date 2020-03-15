@@ -19,6 +19,8 @@ const rename = require("gulp-rename");
 //压缩js插件
 const uglify = require("gulp-uglify");
 
+const util=require("gulp-util");
+
 //打包所有的html文件
 gulp.task("copyhtml", function () {
     return gulp.src("web/*.html")
@@ -84,14 +86,47 @@ gulp.task("indexscss", function () {
 
 
 
+//登录JS
+gulp.task("copyloginJs", function () {
+    return gulp.src("js/login.main.js")
+        .pipe(gulp.dest("dist/js"))
+        .pipe(uglify())
+        .pipe(rename("login.main.min.js"))
+        .pipe(gulp.dest("dist/js"))
+        .pipe(connect.reload());
+});
+//注册JS
+gulp.task("copyregisterJs", function () {
+    return gulp.src("js/register.main.js")
+        .pipe(gulp.dest("dist/js"))
+        .pipe(uglify())
+        .pipe(rename("register.main.min.js"))
+        .pipe(gulp.dest("dist/js"))
+        .pipe(connect.reload());
+});
+//首页JS
+gulp.task("copyindexJs", function () {
+    return gulp.src("js/index.main.js")
+        .pipe(gulp.dest("dist/js"))
+        .pipe(uglify())
+        .pipe(rename("index.main.min.js"))
+        .pipe(gulp.dest("dist/js"))
+        .pipe(connect.reload());
+});
 
-// gulp.task("copyshop",function(){
-//   return  gulp.src("css/shoppingCar.css")
-//     .pipe(minifyCss())
-//     .pipe(rename("shoppingCar.min.css"))
-//     .pipe(gulp.dest("dist/css"))
-//     .pipe(connect.reload());
-// });
+//bannerJS
+gulp.task("copybannerJs", function () {
+    return gulp.src("js/banner.js")
+        .pipe(gulp.dest("dist/js"))
+        .pipe(uglify())
+        //打包时报错提示信息
+        .on('error', function(err) {
+            util.log(util.colors.red('[Error]'), err.toString());
+        })
+        .pipe(rename("banner.min.js"))
+        .pipe(gulp.dest("dist/js"))
+        .pipe(connect.reload());
+});
 
 // 打包所有js到dist目录
 gulp.task("copyJs", function () {
@@ -100,33 +135,6 @@ gulp.task("copyJs", function () {
         .pipe(connect.reload());
 });
 
-//登录JS
-gulp.task("copyloginJs",function(){
-   return gulp.src("js/login.main.js")
-   .pipe(gulp.dest("dist/js"))
-   .pipe(uglify())
-   .pipe(rename("login.main.min.js"))
-   .pipe(gulp.dest("dist/js"))
-   .pipe(connect.reload());
-});
-//注册JS
-gulp.task("copyregisterJs",function(){
-    return gulp.src("js/register.main.js")
-    .pipe(gulp.dest("dist/js"))
-    .pipe(uglify())
-    .pipe(rename("register.main.min.js"))
-    .pipe(gulp.dest("dist/js"))
-    .pipe(connect.reload());
- });
- //首页JS
- gulp.task("copyindexJs",function(){
-    return gulp.src("js/index.main.js")
-    .pipe(gulp.dest("dist/js"))
-    .pipe(uglify())
-    .pipe(rename("index.main.min.js"))
-    .pipe(gulp.dest("dist/js"))
-    .pipe(connect.reload());
- });
 
 gulp.task("build", [
     "copyhtml",
@@ -135,14 +143,15 @@ gulp.task("build", [
     "copycss",
     "loginscss",
     "registerscss",
-    "copyJs",
     "copyregisterJs",
     "copyloginJs",
     "copyindexJs",
-    "indexscss"
-    ], function () {
-        console.log("全部构建成功");
-    });
+    "indexscss",
+    "copybannerJs",
+    "copyJs",
+], function () {
+    console.log("全部构建成功");
+});
 
 //gulp提供监听的机制，自动监听文件，如果发现文件发生改变，自动执行任务，完成更新
 //编写我们监听的文件  
@@ -155,13 +164,14 @@ gulp.task("watch", function () {
     gulp.watch("css/scss/login.{sass,scss}", ["loginscss"]);
     gulp.watch("css/scss/register.{sass,scss}", ["registerscss"]);
     gulp.watch("css/scss/index.{sass,scss}", ["indexscss"]);
-    gulp.watch(["js/*.js"], ["copyJs"]);
+
     gulp.watch("js/login.main.js", ["copyloginJs"]);
     gulp.watch("js/register.main.js", ["copyregisterJs"]);
     gulp.watch("js/index.main.js", ["copyindexJs"]);
+    gulp.watch("js/banner.js", ["copyBannerJs"]);
+    gulp.watch(["js/*.js"], ["copyJs"]);
+
 });
-
-
 //gulp-connect 本地启动一个服务器
 const connect = require("gulp-connect");
 gulp.task("server", function () {

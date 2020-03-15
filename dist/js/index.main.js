@@ -9,11 +9,12 @@
 require.config({
     paths: {
         "index": "index",
-        "banner": "banner"
+        "banner": "banner",
+        "nav": "nav"
     }
 });
 
-require(["index", "banner", "ajax"], function (index, banner, $) {
+require(["index", "banner", "ajax", "nav"], function (index, banner, $, nav) {
     // index.loadBannerData();
     $.ajax({
         type: "get",
@@ -32,6 +33,8 @@ require(["index", "banner", "ajax"], function (index, banner, $) {
             }
             banner.Init(options);
         }
-
     });
+
+    nav.init();
+    index.getHot();
 });

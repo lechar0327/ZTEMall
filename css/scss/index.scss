@@ -132,12 +132,13 @@
         width:100%;
         position: relative;
        .banner-inner{
-            overflow-x:hidden;
+        height: 480px;
+        overflow-x:hidden;
             ul{
-                width:12000px;
-                height: 480px;
-                overflow:hidden;
-                li a{
+            width:12000px;
+            height: 480px;
+            overflow:hidden;
+             li a{
                     display: block;
                     float: left;
                     height: 480px;
@@ -147,16 +148,83 @@
                     }
                 }    
             } 
-       }
+         }
         .leftnav{
             margin-left: 100px;
             width: 250px;
             height: 480px;
             position: absolute;
             top: 0px;
-            left: 50px;
+            left: 0px;
             z-index: 10;
             background-color: rgba(248, 247, 247, 0.8);
+    
+            .navwrap>li{
+                    color: #333;
+                    padding: 13px 20px 13px 22px;
+                    box-sizing: border-box;
+                    margin: 0;
+                    height: 68.5px;
+                    overflow: hidden;
+                    
+                    h2{
+                        color:inherit;
+                        padding-bottom: 8px;
+                        a{
+                            color:#333333;
+                        }
+                    }
+    
+                    ul li{
+                        float: left;
+                        margin: 0 10px 5px 0 !important;
+                        line-height: normal;
+                    }
+                    .goods-block{
+                        width:320px;
+                        height: 480px;
+                        background: #fff;
+                        position: absolute;
+                        top:0;
+                        left:250px;
+                        ul{
+                            width:320px;
+                            padding: 3px 15px;
+                            li{
+                                float:left;
+                                .goods-img{
+                                    width: 50px;
+                                    height: 66px;
+                                    line-height: 66px;
+                                    display: inline-block;
+                                    float: left;
+                                    text-align: center;
+                                    img{
+                                        max-width: 50px;
+                                        max-height: 66px;
+                                        vertical-align: middle;
+                                        margin-top: 0;
+                                    }
+                                }
+                                .goods-title{
+                                    display: inline-block;
+                                    line-height: 66px;
+                                    margin-left: 20px;
+                                    overflow: hidden;
+                                    float: left;
+                                    a:hover{
+                                        color:rgb(252,102,40);
+                                    }
+                                }
+                            }
+                        }
+                    }
+            }
+            .navwrap>li:hover{
+               background: #fff;
+            }
+            
+          
         } 
         .active-num {
             position: absolute;
