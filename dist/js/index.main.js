@@ -21,7 +21,6 @@ require(["index", "banner", "ajax", "nav"], function (index, banner, $, nav) {
         url: "data/banner.json",
         data: {},
         success: function (msg) {
-
             var options = {
                 elementCon: ".banner-inner",
                 elementLeft: ".left-tab",
@@ -35,6 +34,18 @@ require(["index", "banner", "ajax", "nav"], function (index, banner, $, nav) {
         }
     });
 
+    //导航栏初始化
     nav.init();
+    //获取热点数据
     index.getHot();
+    //获取精品推荐数据
+    index.getBoutique();
+    //获取智能硬件数据
+    index.getCapacity();
+    //获取配件专区(初始化)
+    index.getParts(1);
+    //获取配件专区菜单数据
+    index.partMenu();
+    //顶部菜单移入移出
+    index.topNav();
 });

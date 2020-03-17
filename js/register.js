@@ -138,6 +138,7 @@ define(["ajax"], function ($) {
 
     }
 
+    //注册
     function register() {
         var btnRegister = document.querySelector("#btnRegister");
         btnRegister.addEventListener("click", function () {

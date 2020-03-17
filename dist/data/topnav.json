@@ -1,0 +1,86 @@
+[
+    {
+        "typeId": 1,
+        "typeName": "Axon系列",
+        "data": [
+            {
+                "productId": 1,
+                "productName": "【5G手机】ZTE A2020N2 Pro 中兴天机Axon 10 Pro 5G版",
+                "imgsrc": "//image.myzte.com/01/c6/c712bfcbc622.jpg!s?74968_OW800_OH800",
+                "desc": "5G先锋，唯快不破， Axon 10 Pro 八曲面水滴全面屏，4800万超广角AI三摄，20倍混合变焦，高通骁龙855",
+                "link": "https://www.myzte.com/item-2353.html",
+                "productPrice": 4999,
+                "originalPrice": 0
+            },
+            {
+                "productId": 2,
+                "productName": "ZTE中兴 天机Axon 10 Pro ",
+                "imgsrc": "//image.myzte.com/01/c6/c712bfcbc622.jpg!s?74968_OW800_OH800",
+                "desc": "5G先锋，唯快不破， Axon 10 Pro 八曲面水滴全面屏，4800万超广角AI三摄，20倍混合变焦，高通骁龙855",
+                "link": "https://www.myzte.com/item-2353.html",
+                "productPrice": 3199,
+                "originalPrice": 3699
+            }
+        ]
+    },
+    {
+        "typeId": 2,
+        "typeName": "Blade系列",
+        "data": [
+            {
+                "productId": 3,
+                "productName": "【5G手机】ZTE A2020N2 Pro 中兴天机Axon 10 Pro 5G版",
+                "imgsrc": "//image.myzte.com/01/c6/c712bfcbc622.jpg!s?74968_OW800_OH800",
+                "desc": "5G先锋，唯快不破， Axon 10 Pro 八曲面水滴全面屏，4800万超广角AI三摄，20倍混合变焦，高通骁龙855",
+                "link": "https://www.myzte.com/item-2353.html",
+                "productPrice": 5799,
+                "originalPrice": 0
+            },
+            {
+                "productId": 4,
+                "productName": "ZTE A2020 Pro 中兴天机Axon 10 Pro",
+                "imgsrc": "//image.myzte.com/5c/c4/c0cd2e6492a1.jpg!s?95740_OW800_OH800",
+                "desc": "高通骁龙855",
+                "link": "https://www.myzte.com/item-2325.html",
+                "productPrice": 3199,
+                "originalPrice": 3699
+            },
+            {
+                "productId": 5,
+                "productName": "ZTE中兴 Blade 20smart 孝心版",
+                "imgsrc": "//image.myzte.com/19/89/819442182cce.jpg!s?80307_OW800_OH800",
+                "desc": "5000毫安大电池，AI三摄，6.49英寸大屏，远程关爱，4GB+128GB大内存",
+                "link": "https://www.myzte.com/20smart.html",
+                "productPrice": 899,
+                "originalPrice": 999
+            },
+            {
+                "productId": 6,
+                "productName": "ZTE中兴 Blade A7s",
+                "imgsrc": "//image.myzte.com/6a/e0/e9a4183ccb74.jpg!s?80297_OW800_OH800",
+                "desc": "赠送壳膜套装+耳机 4000mAh大电池，高清广角三摄",
+                "link": "https://www.myzte.com/A7s.html",
+                "productPrice": 699,
+                "originalPrice": 799
+            },
+            {
+                "productId": 7,
+                "productName": "ZTE中兴 Blade A7 ",
+                "imgsrc": "//image.myzte.com/25/48/42540a5d99ff.jpg!s?37013_OW800_OH800",
+                "desc": "赠送保护套装",
+                "link": "https://www.myzte.com/A7s.html",
+                "productPrice": 449,
+                "originalPrice": 599
+            },
+            {
+                "productId": 8,
+                "productName": "ZTE中兴 Blade V10",
+                "imgsrc": "//image.myzte.com/63/f3/f83dde9967d3.jpg!s?73904_OW800_OH800",
+                "desc": "3200万AI自拍 高清水滴屏 超强续航",
+                "link": "https://www.myzte.com/A7s.html",
+                "productPrice": 799,
+                "originalPrice": 1199
+            }
+        ]
+    }
+]

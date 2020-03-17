@@ -5,6 +5,11 @@
     width: 1240px;
     margin: 0 auto;
 }
+
+.parts-type{
+    border-bottom: 2px solid rgb(252,102,40);
+}
+               
 .index-wrap{
     width:100%;
     height: 40px;
@@ -64,6 +69,7 @@
     width: 100%;
     height: 85px;
     background: #ffffff;
+    position: relative;
     .i-nav{
         overflow: hidden;
         padding:0 15px 0 10px;
@@ -84,7 +90,9 @@
             width: 834px;
             height: 85px;
             line-height: 85px;
+            
             ul{
+                height: 85px;
                 margin-left: 170px;
                 li{
                     float: left;
@@ -96,6 +104,79 @@
                     a:hover{
                         color:rgb(82,149,222)
                     }
+                    
+                }
+            }
+            .detail-block{
+                position: absolute;
+                width: 100%;
+                height: 228px;
+                top:85px;
+                left:0px;
+                background: #fff;
+                z-index:999;
+                ul{
+                    height: 228px; 
+                    li{
+                        margin: 0px;
+                        float: left;
+                        width:205px;
+                        height: 228px;
+                        overflow: hidden;
+                        text-align: center;
+                        .detail-img{
+                            margin-top: 20px;
+                            width: 204px;
+                            height: 140px;
+                            margin: 0;
+                            line-height: 140px;
+                            text-align: center;
+                            border-left:1px solid rgb(224,224,224);
+                            img{
+                                width: 140px;
+                                height: 140px;
+                                vertical-align: middle;
+                            }
+                          
+                         }
+                        
+                         .details{
+                            margin-top: 10px;
+                            .d-title{
+                                color:#333;
+                                font-size: 12px;
+                            }
+                            p{
+                                padding:0 15px;
+                                overflow: hidden;/*超出部分隐藏*/
+                                text-overflow:ellipsis;/* 超出部分显示省略号 */
+                                white-space: nowrap;/*规定段落中的文本不进行换行 */
+                                height: 24px;
+                                line-height: 24px;
+                                text-align: center;
+                            }
+
+                            .d-price{
+                                color:red;
+                                strong{
+                                    font-weight: 600;
+                                    font-size: 14px;
+                                }
+                                del{
+                                    color:#333;
+                                    margin-left: 2px;
+                                    font-size: 12px;
+                                    text-decoration: line-through;
+                                }
+                               
+                            }
+                        }
+                    }
+                    li:hover{
+                        position: relative;
+                        top:-4px;
+                        // box-shadow: 0 0 20px #ccc;
+                     }
                 }
             }
            
@@ -223,8 +304,6 @@
             .navwrap>li:hover{
                background: #fff;
             }
-            
-          
         } 
         .active-num {
             position: absolute;
@@ -306,7 +385,7 @@
         }
         .hot-goods{
             position: relative;
-            a{  
+             a{  
                 display: inline-block;
                 width: 608px;
                 margin: 3px;
@@ -323,5 +402,271 @@
             }
         }
     }
-    
+}
+.prod-wrap{
+    height: 1506px;
+    background: #f5f5f5;
+    padding-top: 10px;
+    .boutique-wrap{
+        .b-title{
+            h2{
+                display: inline-block;
+                height: 90px;
+                line-height: 90px;
+            }
+            em{
+                display: inline-block;
+                font-size: 10px;
+            }
+        }
+        .b-goods{
+            height: 610px;
+            .mobile-banner{
+                width: 300px;
+                float:left;
+                img{
+                    width:100%;
+                    height: 100%;
+                }
+            }
+            .mobile-banner:hover{
+                position: relative;
+                top:-4px;
+                box-shadow: 0 0 20px #ccc;
+            }
+            .mobile-prod{
+                float:left;
+                width:940px;
+                ul li{
+                    float:left;
+                    width:300px;
+                    height: 300px;
+                    margin-left: 8px;
+                    margin-bottom: 10px;
+                    background: #fff;
+                    .goodImg{
+                        width:180px;
+                        height:180px;
+                        margin: auto;
+                        position: relative;
+                        padding-top: 25px;
+                        img{
+                            width:100%;
+                            height: 100%;
+                        }
+                    }
+                    .good-details{
+                        margin-top: 10px;
+                        p{
+                            padding:0 15px;
+                            overflow: hidden;/*超出部分隐藏*/
+                            text-overflow:ellipsis;/* 超出部分显示省略号 */
+                            white-space: nowrap;/*规定段落中的文本不进行换行 */
+                            height: 24px;
+                            line-height: 24px;
+                            text-align: center;
+                        }
+                        .phone-title{
+                            color:#333333;
+                            font-size: 14px;
+                        }
+                        .phone-desc{
+                            color:#b0b0b0;
+                            font-size: 12px;
+                        }
+                        .phone-price{
+                            color:red;
+                            strong{
+                                font-weight: 600;
+                                font-size: 16px;
+                            }
+                            del{
+                                color:#333;
+                                margin-left: 2px;
+                                font-size: 14px;
+                                text-decoration: line-through;
+                            }
+                        }
+                    }
+                }
+
+                ul li:hover{
+                    position: relative;
+                    top:-4px;
+                    box-shadow: 0 0 20px #ccc;
+                }
+            }
+        }
+
+    }
+    .capacity-wrap{
+        .c-title{
+            h2{
+                display: inline-block;
+                height: 90px;
+                line-height: 90px;
+            }
+            em{
+                display: inline-block;
+                font-size: 10px;
+            }
+        }
+        .c-goods{
+            height: 300px;
+            .capacity-prod{
+                ul li{
+                    float:left;
+                    width:300px;
+                    height: 300px;
+                    margin-right: 10px;
+                    background: #fff;
+                    .capacityImg{
+                        width:180px;
+                        height:180px;
+                        margin: auto;
+                        position: relative;
+                        padding-top: 25px;
+                        img{
+                            width:100%;
+                            height: 100%;
+                        }
+                    }
+                    .capacityDetails{
+                        margin-top: 10px;
+                        p{
+                            padding:0 15px;
+                            overflow: hidden;/*超出部分隐藏*/
+                            text-overflow:ellipsis;/* 超出部分显示省略号 */
+                            white-space: nowrap;/*规定段落中的文本不进行换行 */
+                            height: 24px;
+                            line-height: 24px;
+                            text-align: center;
+                        }
+                        .phone-title{
+                            color:#333333;
+                            font-size: 14px;
+                        }
+                        .phone-desc{
+                            color:#b0b0b0;
+                            font-size: 12px;
+                        }
+                        .phone-price{
+                            color:red;
+                            strong{
+                                font-weight: 600;
+                                font-size: 16px;
+                            }
+                            del{
+                                color:#333;
+                                margin-left: 2px;
+                                font-size: 14px;
+                                text-decoration: line-through;
+                            }
+                           
+                        }
+                    }
+                }
+
+                ul li:hover{
+                    position: relative;
+                    top:-4px;
+                    box-shadow: 0 0 20px #ccc;
+                }
+            }
+        }
+    }
+
+    .parts-wrap{
+        .p-title{
+            h2{
+                display: inline-block;
+                height: 90px;
+                line-height: 90px;
+            }
+            em{
+                display: inline-block;
+                font-size: 10px;
+            }
+            
+            ul{
+                float:right;
+                li{
+                    display: block;
+                    width: 50px;
+                    height: 90px;
+                    line-height: 90px;
+                    float: left;
+                    color:#767676;
+                    text-align: center;
+                    font-size: 14px;
+                    img{
+                         vertical-align: middle;
+                    }
+                }
+            }
+        }
+        .p-goods{
+            height: 300px;
+            .parts-prod{
+                ul li{
+                    float:left;
+                    width:300px;
+                    height: 300px;
+                    margin-right: 10px;
+                    background: #fff;
+                    .partsImg{
+                        width:180px;
+                        height:180px;
+                        margin: auto;
+                        position: relative;
+                        padding-top: 25px;
+                        img{
+                            width:100%;
+                            height: 100%;
+                        }
+                    }
+                    .partsDetails{
+                        margin-top: 10px;
+                        p{
+                            padding:0 15px;
+                            overflow: hidden;/*超出部分隐藏*/
+                            text-overflow:ellipsis;/* 超出部分显示省略号 */
+                            white-space: nowrap;/*规定段落中的文本不进行换行 */
+                            height: 24px;
+                            line-height: 24px;
+                            text-align: center;
+                        }
+                        .phone-title{
+                            color:#333333;
+                            font-size: 14px;
+                        }
+                        .phone-desc{
+                            color:#b0b0b0;
+                            font-size: 12px;
+                        }
+                        .phone-price{
+                            color:red;
+                            strong{
+                                font-weight: 600;
+                                font-size: 16px;
+                            }
+                            del{
+                                color:#333;
+                                margin-left: 2px;
+                                font-size: 14px;
+                                text-decoration: line-through;
+                            }
+                           
+                        }
+                    }
+                }
+
+                ul li:hover{
+                    position: relative;
+                    top:-4px;
+                    box-shadow: 0 0 20px #ccc;
+                }
+            }
+        }
+    }
 }

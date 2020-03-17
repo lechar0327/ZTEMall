@@ -140,6 +140,8 @@ input[type="number"] { -moz-appearance: textfield; }
 
 .container, .main-wrap .m-service, .footer .ft-main, .index-wrap .l-top { width: 1240px; margin: 0 auto; }
 
+.parts-type { border-bottom: 2px solid #fc6628; }
+
 .index-wrap { width: 100%; height: 40px; background: #f8f8f8; }
 
 .index-wrap .l-top { height: 40px; padding: 0 15px 0 10px; box-sizing: border-box; }
@@ -162,7 +164,7 @@ input[type="number"] { -moz-appearance: textfield; }
 
 .index-wrap .l-top .t-right .cartTips img { vertical-align: middle; }
 
-.nav-wrap { width: 100%; height: 85px; background: #ffffff; }
+.nav-wrap { width: 100%; height: 85px; background: #ffffff; position: relative; }
 
 .nav-wrap .i-nav { overflow: hidden; padding: 0 15px 0 10px; box-sizing: border-box; }
 
@@ -172,13 +174,37 @@ input[type="number"] { -moz-appearance: textfield; }
 
 .nav-wrap .i-nav .nav { float: left; width: 834px; height: 85px; line-height: 85px; }
 
-.nav-wrap .i-nav .nav ul { margin-left: 170px; }
+.nav-wrap .i-nav .nav ul { height: 85px; margin-left: 170px; }
 
 .nav-wrap .i-nav .nav ul li { float: left; margin: 0 15px; }
 
 .nav-wrap .i-nav .nav ul li a { font-size: 14px; color: #333; }
 
 .nav-wrap .i-nav .nav ul li a:hover { color: #5295de; }
+
+.nav-wrap .i-nav .nav .detail-block { position: absolute; width: 100%; height: 228px; top: 85px; left: 0px; background: #fff; z-index: 999; }
+
+.nav-wrap .i-nav .nav .detail-block ul { height: 228px; }
+
+.nav-wrap .i-nav .nav .detail-block ul li { margin: 0px; float: left; width: 205px; height: 228px; overflow: hidden; text-align: center; }
+
+.nav-wrap .i-nav .nav .detail-block ul li .detail-img { margin-top: 20px; width: 204px; height: 140px; margin: 0; line-height: 140px; text-align: center; border-left: 1px solid #e0e0e0; }
+
+.nav-wrap .i-nav .nav .detail-block ul li .detail-img img { width: 140px; height: 140px; vertical-align: middle; }
+
+.nav-wrap .i-nav .nav .detail-block ul li .details { margin-top: 10px; }
+
+.nav-wrap .i-nav .nav .detail-block ul li .details .d-title { color: #333; font-size: 12px; }
+
+.nav-wrap .i-nav .nav .detail-block ul li .details p { padding: 0 15px; overflow: hidden; /*超出部分隐藏*/ text-overflow: ellipsis; /* 超出部分显示省略号 */ white-space: nowrap; /*规定段落中的文本不进行换行 */ height: 24px; line-height: 24px; text-align: center; }
+
+.nav-wrap .i-nav .nav .detail-block ul li .details .d-price { color: red; }
+
+.nav-wrap .i-nav .nav .detail-block ul li .details .d-price strong { font-weight: 600; font-size: 14px; }
+
+.nav-wrap .i-nav .nav .detail-block ul li .details .d-price del { color: #333; margin-left: 2px; font-size: 12px; text-decoration: line-through; }
+
+.nav-wrap .i-nav .nav .detail-block ul li:hover { position: relative; top: -4px; }
 
 .nav-wrap .i-nav .search { float: left; width: 190px; height: 85px; line-height: 85px; position: relative; }
 
@@ -253,3 +279,103 @@ input[type="number"] { -moz-appearance: textfield; }
 .hot-wrap .h-main .hot-goods a img { width: 100%; height: 100%; }
 
 .hot-wrap .h-main .hot-goods a:hover img { position: relative; top: -4px; box-shadow: 0 0 20px #ccc; }
+
+.prod-wrap { height: 1506px; background: #f5f5f5; padding-top: 10px; }
+
+.prod-wrap .boutique-wrap .b-title h2 { display: inline-block; height: 90px; line-height: 90px; }
+
+.prod-wrap .boutique-wrap .b-title em { display: inline-block; font-size: 10px; }
+
+.prod-wrap .boutique-wrap .b-goods { height: 610px; }
+
+.prod-wrap .boutique-wrap .b-goods .mobile-banner { width: 300px; float: left; }
+
+.prod-wrap .boutique-wrap .b-goods .mobile-banner img { width: 100%; height: 100%; }
+
+.prod-wrap .boutique-wrap .b-goods .mobile-banner:hover { position: relative; top: -4px; box-shadow: 0 0 20px #ccc; }
+
+.prod-wrap .boutique-wrap .b-goods .mobile-prod { float: left; width: 940px; }
+
+.prod-wrap .boutique-wrap .b-goods .mobile-prod ul li { float: left; width: 300px; height: 300px; margin-left: 8px; margin-bottom: 10px; background: #fff; }
+
+.prod-wrap .boutique-wrap .b-goods .mobile-prod ul li .goodImg { width: 180px; height: 180px; margin: auto; position: relative; padding-top: 25px; }
+
+.prod-wrap .boutique-wrap .b-goods .mobile-prod ul li .goodImg img { width: 100%; height: 100%; }
+
+.prod-wrap .boutique-wrap .b-goods .mobile-prod ul li .good-details { margin-top: 10px; }
+
+.prod-wrap .boutique-wrap .b-goods .mobile-prod ul li .good-details p { padding: 0 15px; overflow: hidden; /*超出部分隐藏*/ text-overflow: ellipsis; /* 超出部分显示省略号 */ white-space: nowrap; /*规定段落中的文本不进行换行 */ height: 24px; line-height: 24px; text-align: center; }
+
+.prod-wrap .boutique-wrap .b-goods .mobile-prod ul li .good-details .phone-title { color: #333333; font-size: 14px; }
+
+.prod-wrap .boutique-wrap .b-goods .mobile-prod ul li .good-details .phone-desc { color: #b0b0b0; font-size: 12px; }
+
+.prod-wrap .boutique-wrap .b-goods .mobile-prod ul li .good-details .phone-price { color: red; }
+
+.prod-wrap .boutique-wrap .b-goods .mobile-prod ul li .good-details .phone-price strong { font-weight: 600; font-size: 16px; }
+
+.prod-wrap .boutique-wrap .b-goods .mobile-prod ul li .good-details .phone-price del { color: #333; margin-left: 2px; font-size: 14px; text-decoration: line-through; }
+
+.prod-wrap .boutique-wrap .b-goods .mobile-prod ul li:hover { position: relative; top: -4px; box-shadow: 0 0 20px #ccc; }
+
+.prod-wrap .capacity-wrap .c-title h2 { display: inline-block; height: 90px; line-height: 90px; }
+
+.prod-wrap .capacity-wrap .c-title em { display: inline-block; font-size: 10px; }
+
+.prod-wrap .capacity-wrap .c-goods { height: 300px; }
+
+.prod-wrap .capacity-wrap .c-goods .capacity-prod ul li { float: left; width: 300px; height: 300px; margin-right: 10px; background: #fff; }
+
+.prod-wrap .capacity-wrap .c-goods .capacity-prod ul li .capacityImg { width: 180px; height: 180px; margin: auto; position: relative; padding-top: 25px; }
+
+.prod-wrap .capacity-wrap .c-goods .capacity-prod ul li .capacityImg img { width: 100%; height: 100%; }
+
+.prod-wrap .capacity-wrap .c-goods .capacity-prod ul li .capacityDetails { margin-top: 10px; }
+
+.prod-wrap .capacity-wrap .c-goods .capacity-prod ul li .capacityDetails p { padding: 0 15px; overflow: hidden; /*超出部分隐藏*/ text-overflow: ellipsis; /* 超出部分显示省略号 */ white-space: nowrap; /*规定段落中的文本不进行换行 */ height: 24px; line-height: 24px; text-align: center; }
+
+.prod-wrap .capacity-wrap .c-goods .capacity-prod ul li .capacityDetails .phone-title { color: #333333; font-size: 14px; }
+
+.prod-wrap .capacity-wrap .c-goods .capacity-prod ul li .capacityDetails .phone-desc { color: #b0b0b0; font-size: 12px; }
+
+.prod-wrap .capacity-wrap .c-goods .capacity-prod ul li .capacityDetails .phone-price { color: red; }
+
+.prod-wrap .capacity-wrap .c-goods .capacity-prod ul li .capacityDetails .phone-price strong { font-weight: 600; font-size: 16px; }
+
+.prod-wrap .capacity-wrap .c-goods .capacity-prod ul li .capacityDetails .phone-price del { color: #333; margin-left: 2px; font-size: 14px; text-decoration: line-through; }
+
+.prod-wrap .capacity-wrap .c-goods .capacity-prod ul li:hover { position: relative; top: -4px; box-shadow: 0 0 20px #ccc; }
+
+.prod-wrap .parts-wrap .p-title h2 { display: inline-block; height: 90px; line-height: 90px; }
+
+.prod-wrap .parts-wrap .p-title em { display: inline-block; font-size: 10px; }
+
+.prod-wrap .parts-wrap .p-title ul { float: right; }
+
+.prod-wrap .parts-wrap .p-title ul li { display: block; width: 50px; height: 90px; line-height: 90px; float: left; color: #767676; text-align: center; font-size: 14px; }
+
+.prod-wrap .parts-wrap .p-title ul li img { vertical-align: middle; }
+
+.prod-wrap .parts-wrap .p-goods { height: 300px; }
+
+.prod-wrap .parts-wrap .p-goods .parts-prod ul li { float: left; width: 300px; height: 300px; margin-right: 10px; background: #fff; }
+
+.prod-wrap .parts-wrap .p-goods .parts-prod ul li .partsImg { width: 180px; height: 180px; margin: auto; position: relative; padding-top: 25px; }
+
+.prod-wrap .parts-wrap .p-goods .parts-prod ul li .partsImg img { width: 100%; height: 100%; }
+
+.prod-wrap .parts-wrap .p-goods .parts-prod ul li .partsDetails { margin-top: 10px; }
+
+.prod-wrap .parts-wrap .p-goods .parts-prod ul li .partsDetails p { padding: 0 15px; overflow: hidden; /*超出部分隐藏*/ text-overflow: ellipsis; /* 超出部分显示省略号 */ white-space: nowrap; /*规定段落中的文本不进行换行 */ height: 24px; line-height: 24px; text-align: center; }
+
+.prod-wrap .parts-wrap .p-goods .parts-prod ul li .partsDetails .phone-title { color: #333333; font-size: 14px; }
+
+.prod-wrap .parts-wrap .p-goods .parts-prod ul li .partsDetails .phone-desc { color: #b0b0b0; font-size: 12px; }
+
+.prod-wrap .parts-wrap .p-goods .parts-prod ul li .partsDetails .phone-price { color: red; }
+
+.prod-wrap .parts-wrap .p-goods .parts-prod ul li .partsDetails .phone-price strong { font-weight: 600; font-size: 16px; }
+
+.prod-wrap .parts-wrap .p-goods .parts-prod ul li .partsDetails .phone-price del { color: #333; margin-left: 2px; font-size: 14px; text-decoration: line-through; }
+
+.prod-wrap .parts-wrap .p-goods .parts-prod ul li:hover { position: relative; top: -4px; box-shadow: 0 0 20px #ccc; }

@@ -149,7 +149,7 @@ define(["ajax"], function ($) {
             }
             startMove();
             // 清除上一个图片的数字切换样式
-            console.log(oNums);
+            // console.log(oNums);
 
             oNums[indexNum].className = "";
 
@@ -251,8 +251,245 @@ define(["ajax"], function ($) {
             }
         });
     }
+
+    //获取精品推荐数据
+    function getBoutique() {
+        var oBoutiqueGoods = document.querySelector(".boutique-prod");
+        $.ajax({
+            type: "get",
+            url: "data/product.json",
+            data: {},
+            success: function (msg) {
+                var data = JSON.parse(msg)[0].boutique;
+
+                var strHtml = `<ul class="clearfix">`;
+                var strLi = "";
+                for (var i = 0; i < data.length; i++) {
+                    var delHtml = "";
+                    if (data[i].originalPrice != 0) {
+                        delHtml = `<del>¥${data[i].originalPrice}</del>`;
+                    }
+                    strLi += ` <li index="${data[i].productId}">
+                                <a href="${data[i].link}">
+                                    <div class="goodImg">
+                                        <img src="${data[i].imgsrc}" alt="">
+                                    </div>
+                                    <div class="good-details">
+                                        <p class="phone-title">${data[i].productName}</p>
+                                        <p class="phone-desc">${data[i].desc}</p>
+                                        <p class="phone-price">¥<strong>${data[i].productPrice}</strong>
+                                        ${delHtml}</p>
+                                    </div>
+                                </a>
+                            </li>`;
+                }
+                strHtml += strLi + "</ul>";
+                oBoutiqueGoods.innerHTML = strHtml;
+            }
+        });
+
+    }
+
+    //获取智能硬件数据
+    function getCapacity() {
+        var oCapacityGoods = document.querySelector(".capacity-prod");
+        $.ajax({
+            type: "get",
+            url: "data/product.json",
+            data: {},
+            success: function (msg) {
+                var data = JSON.parse(msg)[0].capacity;
+
+                var strHtml = `<ul class="clearfix">`;
+                var strLi = "";
+                for (var i = 0; i < data.length; i++) {
+                    var delHtml = "";
+                    if (data[i].originalPrice != 0) {
+                        delHtml = `<del>¥${data[i].originalPrice}</del>`;
+                    }
+                    strLi += `<li index="${data[i].productId}">
+                                <a href="${data[i].link}">
+                                    <div class="capacityImg">
+                                        <img src="${data[i].imgsrc}" alt="">
+                                    </div>
+                                    <div class="capacityDetails">
+                                        <p class="phone-title">${data[i].productName}</p>
+                                        <p class="phone-desc">${data[i].desc}</p>
+                                        <p class="phone-price">¥<strong>${data[i].productPrice}</strong>
+                                        ${delHtml}</p>
+                                    </div>
+                                </a>
+                            </li>`;
+                }
+                strHtml += strLi + "</ul>";
+                oCapacityGoods.innerHTML = strHtml;
+            }
+        });
+    }
+
+    //获取配件专区菜单数据
+    function partMenu() {
+        var nodeDiv = document.querySelector(".parts-wrap .p-title ul");
+        nodeDiv.innerHTML = "";
+        $.ajax({
+            type: "get",
+            url: "data/product.json",
+            data: {},
+            success: function (msg) {
+                var data = JSON.parse(msg)[0].parts;
+
+                var strli = "";
+                for (var i = 0; i < data.length; i++) {
+                    strli += `<li><a  index="${data[i].typeId}" href="javascript:">${data[i].typeName}</a></li>`;
+                }
+
+                strli += `<li> <a href="javascript:">更多 &nbsp;<img src="images/look-all.png" alt=""></a> </li>`
+                nodeDiv.innerHTML = strli;
+
+                var oLis = nodeDiv.querySelectorAll("li a");
+                for (var i = 0; i < oLis.length - 1; i++) {
+                    oLis[i].parentNode.className = "";
+                    oLis[i].ind = i;
+                    oLis[i].onmouseenter = function () {
+                        for (var j = 0; j < oLis.length; j++) {
+                            oLis[j].parentNode.className = "";
+                        }
+                        this.parentNode.className = "parts-type";
+
+                        getParts(this.getAttribute("index"));
+                    }
+                }
+
+            }
+        });
+    }
+    //获取配件专区
+    function getParts(typeId) {
+        var oPartsGoods = document.querySelector(".parts-prod");
+        $.ajax({
+            type: "get",
+            url: "data/product.json",
+            data: {},
+            success: function (msg) {
+                var data = JSON.parse(msg)[0].parts;
+
+                var strHtml = `<ul class="clearfix">`;
+                var strLi = "";
+                for (var i = 0; i < data.length; i++) {
+
+                    if (typeId == data[i].typeId) {
+                        var prodata = data[i].prodata;
+
+                        for (var j = 0; j < prodata.length; j++) {
+                            var delHtml = "";
+                            if (prodata[j].originalPrice != 0) {
+                                delHtml = `<del>¥${prodata[j].originalPrice}</del>`;
+                            }
+                            strLi += `<li index="${prodata[j].productId}">
+                                        <a href="${prodata[j].link}">
+                                            <div class="partsImg">
+                                                <img src="${prodata[j].imgsrc}" alt="">
+                                            </div>
+                                            <div class="partsDetails">
+                                                <p class="phone-title">${prodata[j].productName}</p>
+                                                <p class="phone-desc">${prodata[j].desc}</p>
+                                                <p class="phone-price">¥<strong>${prodata[j].productPrice}</strong>
+                                                ${delHtml}</p>
+                                            </div>
+                                        </a>
+                                    </li>`;
+                        }
+
+                    }
+                }
+                strHtml += strLi + "</ul>";
+
+                oPartsGoods.innerHTML = strHtml;
+            }
+        });
+    }
+
+    //导航栏移入移出
+    function topNav() {
+        var node = document.querySelector(".top-nav");
+
+        node.addEventListener("mouseover", function (ev) {
+            var e = ev || window.event;
+            var target = e.target || window.event.srcElement;
+            if (target.tagName.toLowerCase() == "a" && target.className == "axon-blade") {
+                var goodsEle = document.querySelector(".detail-block ul");
+                if (goodsEle) {
+                    goodsEle.parentNode.removeChild(goodsEle);
+                }
+
+                var typeIndex = target.getAttribute("index");
+                getNavData(typeIndex);
+            }
+        });
+        node.addEventListener("mouseleave", function (ev) {
+            var nodeData = document.querySelector(".detail-block");
+            nodeData.style.display = "none";
+            nodeData.innerHTML = "";
+        });
+    }
+
+    // 获取导航栏数据
+    function getNavData(typeIndex) {
+
+        var nodeData = document.querySelector(".detail-block");
+        nodeData.style.display = "block";
+        nodeData.innerHTML = "";
+        $.ajax({
+            type: "get",
+            url: "data/topnav.json",
+            data: {},
+            success: function (msg) {
+                var data = JSON.parse(msg);
+
+                for (var i = 0; i < data.length; i++) {
+
+                    if (typeIndex == data[i].typeId) {
+                        var d = data[i].data;
+                        var oUl = `<ul class="container">`;
+                        var liHtml = "";
+
+                        for (var j = 0; j < d.length; j++) {
+                            var delHtml = "";
+                            if (d[j].originalPrice != 0) {
+                                delHtml = `<del>¥${d[j].originalPrice}</del>`;
+                            }
+                            liHtml += ` <li>
+                                        <a href="${d[j].link}">
+                                            <div class="detail-img">
+                                                <img src="${d[j].imgsrc}" alt="">
+                                            </div>
+                                            <div class="details">
+                                                <p class="d-title">${d[j].productName}</p>
+                                                <p class="d-price">¥<strong>${d[j].productPrice}</strong>
+                                                ${delHtml}</p>
+                                            </div>
+                                        </a>
+                                    </li>`
+                        }
+                        oUl += liHtml + " </ul >";
+                        nodeData.innerHTML = oUl;
+                    }
+                }
+
+                var lisImg = nodeData.querySelector("li .detail-img");
+
+                lisImg.style.borderLeft = "none";
+            }
+        });
+    }
+
     return {
         loadBannerData: loadBannerData,
-        getHot: getHot
+        getHot: getHot,
+        getBoutique: getBoutique,
+        getCapacity: getCapacity,
+        getParts: getParts,
+        partMenu: partMenu,
+        topNav: topNav
     }
 });

@@ -1,0 +1,227 @@
+[
+    {
+        "boutique": [
+            {
+                "productId": 1,
+                "productName": "【5G手机】ZTE A2020N2 Pro 中兴天机Axon 10 Pro 5G版",
+                "imgsrc": "//image.myzte.com/01/c6/c712bfcbc622.jpg!s?74968_OW800_OH800",
+                "desc": "5G先锋，唯快不破， Axon 10 Pro 八曲面水滴全面屏，4800万超广角AI三摄，20倍混合变焦，高通骁龙855",
+                "link": "https://www.myzte.com/item-2353.html",
+                "productPrice": 5799,
+                "originalPrice": 0
+            },
+            {
+                "productId": 2,
+                "productName": "ZTE A2020 Pro 中兴天机Axon 10 Pro",
+                "imgsrc": "//image.myzte.com/5c/c4/c0cd2e6492a1.jpg!s?95740_OW800_OH800",
+                "desc": "高通骁龙855",
+                "link": "https://www.myzte.com/item-2325.html",
+                "productPrice": 3199,
+                "originalPrice": 3699
+            },
+            {
+                "productId": 3,
+                "productName": "ZTE中兴 Blade 20smart 孝心版",
+                "imgsrc": "//image.myzte.com/19/89/819442182cce.jpg!s?80307_OW800_OH800",
+                "desc": "5000毫安大电池，AI三摄，6.49英寸大屏，远程关爱，4GB+128GB大内存",
+                "link": "https://www.myzte.com/20smart.html",
+                "productPrice": 899,
+                "originalPrice": 999
+            },
+            {
+                "productId": 4,
+                "productName": "ZTE中兴 Blade A7s",
+                "imgsrc": "//image.myzte.com/6a/e0/e9a4183ccb74.jpg!s?80297_OW800_OH800",
+                "desc": "赠送壳膜套装+耳机 4000mAh大电池，高清广角三摄",
+                "link": "https://www.myzte.com/A7s.html",
+                "productPrice": 699,
+                "originalPrice": 799
+            },
+            {
+                "productId": 5,
+                "productName": "ZTE中兴 Blade A7 ",
+                "imgsrc": "//image.myzte.com/25/48/42540a5d99ff.jpg!s?37013_OW800_OH800",
+                "desc": "赠送保护套装",
+                "link": "https://www.myzte.com/A7s.html",
+                "productPrice": 449,
+                "originalPrice": 599
+            },
+            {
+                "productId": 6,
+                "productName": "ZTE中兴 Blade V10",
+                "imgsrc": "//image.myzte.com/63/f3/f83dde9967d3.jpg!s?73904_OW800_OH800",
+                "desc": "3200万AI自拍 高清水滴屏 超强续航",
+                "link": "https://www.myzte.com/A7s.html",
+                "productPrice": 799,
+                "originalPrice": 1199
+            }
+        ],
+        "capacity": [
+            {
+                "productId": 7,
+                "productName": "ZTE中兴路由器 5G CPE",
+                "imgsrc": "//image.myzte.com/5c/a7/aacec0aac084.jpg!s?32962_OW800_OH800",
+                "desc": "【直降600，到手价2999元】高通骁龙X50平台、5G高速网络",
+                "link": "https://www.myzte.com/item-2358.html",
+                "productPrice": 2999,
+                "originalPrice": 3599
+            },
+            {
+                "productId": 8,
+                "productName": "【两只装】ZTE中兴 Mesh路由器MF18A",
+                "imgsrc": "//image.myzte.com/73/3c/3731e754945a.png!s?72367_OW800_OH800",
+                "desc": "分布式路由器 子母路由器 千兆家用WiFi 穿墙王 覆盖无忧 无线路由器",
+                "link": "https://www.myzte.com/item-2359.html",
+                "productPrice": 699,
+                "originalPrice": 799
+            },
+            {
+                "productId": 9,
+                "productName": "ZTE中兴 4G全网通随身wifi MF920U5",
+                "imgsrc": "//image.myzte.com/d2/a9/a1234341e23d.jpg!s?47902_OW800_OH800",
+                "desc": "4G全网通无线wifi",
+                "link": "https://www.myzte.com/item-2375.html",
+                "productPrice": 299,
+                "originalPrice": 0
+            },
+            {
+                "productId": 10,
+                "productName": "ZTE中兴 4G室内无线路由器  4GCPE  MF283U",
+                "imgsrc": "//image.myzte.com/1f/c1/cff5788e2d1c.jpg!s?48442_OW800_OH800",
+                "desc": "",
+                "link": "https://www.myzte.com/item-2375.html",
+                "productPrice": 399,
+                "originalPrice": 0
+            }
+        ],
+        "parts": [
+            {
+               
+                "prodata": [
+                    {
+                        "productId": 11,
+                        "productName": "ZTE中兴 天机AXON 10 Pro 无线充电座",
+                        "imgsrc": "//image.myzte.com/5c/a7/aacec0aac084.jpg!s?32962_OW800_OH800",
+                        "desc": "",
+                        "link": "https://www.myzte.com/item-2328.html",
+                        "productPrice": 149,
+                        "originalPrice": 0
+                    },
+                    {
+                        "productId": 12,
+                        "productName": "ZTE中兴  智能手机 扩展坞",
+                        "imgsrc": "//image.myzte.com/ae/20/23e115b90fc7.png!s?53373_OW800_OH800",
+                        "desc": "",
+                        "link": "https://www.myzte.com/item-1568.html",
+                        "productPrice": 299,
+                        "originalPrice": 0
+                    },
+                    {
+                        "productId": 13,
+                        "productName": "ZTE中兴 天机Axon 10 Pro 智能保护套",
+                        "imgsrc": "//image.myzte.com/ce/94/94e383bbb744.jpg!s?99168_OW800_OH800",
+                        "desc": "",
+                        "link": "https://www.myzte.com/item-2340.html",
+                        "productPrice": 149,
+                        "originalPrice": 0
+                    },
+                    {
+                        "productId": 14,
+                        "productName": "ZTE中兴 Blade A7 TPU保护套套装",
+                        "imgsrc": "//image.myzte.com/80/6c/6404ca159dd7.jpg!s?21039_OW800_OH800",
+                        "desc": "",
+                        "link": "https://www.myzte.com/item-2340.html",
+                        "productPrice": 39,
+                        "originalPrice": 0
+                    }
+                ],
+                "typeId": 1,
+                "typeName": "壳膜套"
+            },
+            {
+                "prodata": [
+                    {
+                        "productId": 15,
+                        "productName": "5000mAh移动电源 P60",
+                        "imgsrc": "//image.myzte.com/48/1d/17821aa773c2.jpg!s?06983_OW800_OH800",
+                        "desc": "",
+                        "link": "https://www.myzte.com/item-1817.html",
+                        "productPrice": 99,
+                        "originalPrice": 0
+                    },
+                    {
+                        "productId": 16,
+                        "productName": "2550mAh 卡片式移动电源 ",
+                        "imgsrc": "//image.myzte.com/43/13/1e38f0caa072.jpg!s?06983_OW800_OH800",
+                        "desc": "",
+                        "link": "https://www.myzte.com/item-2328.html",
+                        "productPrice": 35,
+                        "originalPrice": 0
+                    },
+                    {
+                        "productId": 17,
+                        "productName": "5000mAh移动电源  P42 轻薄金属机身",
+                        "imgsrc": "//image.myzte.com/4b/c7/ccb0a2bd8a6c.jpg!s?06981_OW800_OH800",
+                        "desc": "",
+                        "link": "https://www.myzte.com/item-2328.html",
+                        "productPrice": 59,
+                        "originalPrice": 0
+                    },
+                    {
+                        "productId": 18,
+                        "productName": "P52 卡片式移动电源",
+                        "imgsrc": "//image.myzte.com/91/28/221f5f8ef84b.jpg!s?65834_OW1000_OH1000",
+                        "desc": "",
+                        "link": "https://www.myzte.com/item-2328.html",
+                        "productPrice": 59,
+                        "originalPrice": 0
+                    }
+                ],
+                "typeId": 2,
+                "typeName": "充电宝"
+            },
+            {
+                "prodata": [
+                    {
+                        "productId": 19,
+                        "productName": "小球音箱 S201",
+                        "imgsrc": "//image.myzte.com/59/e1/e49ded580c8a.jpg!s?06983_OW800_OH800",
+                        "desc": "",
+                        "link": "https://www.myzte.com/item-1817.html",
+                        "productPrice": 49,
+                        "originalPrice": 0
+                    },
+                    {
+                        "productId": 20,
+                        "productName": "竹韵耳机 SOH3506",
+                        "imgsrc": "//image.myzte.com/d7/10/1c7f7132ef7b.jpg!s?06983_OW800_OH800",
+                        "desc": "",
+                        "link": "https://www.myzte.com/item-2328.html",
+                        "productPrice": 79,
+                        "originalPrice": 0
+                    },
+                    {
+                        "productId": 21,
+                        "productName": "线控耳机 SOH3516",
+                        "imgsrc": "//image.myzte.com/dc/cc/c4c1a98edc2a.png!s?73694_OW800_OH800",
+                        "desc": "",
+                        "link": "https://www.myzte.com/item-2328.html",
+                        "productPrice": 49,
+                        "originalPrice": 0
+                    },
+                    {
+                        "productId": 22,
+                        "productName": "线控耳机 SOH3513（美标 CTIA）",
+                        "imgsrc": "//image.myzte.com/0d/94/98d38133158f.jpg!s?06983_OW800_OH800",
+                        "desc": "",
+                        "link": "https://www.myzte.com/item-2328.html",
+                        "productPrice": 49,
+                        "originalPrice": 0
+                    }
+                ],
+                "typeId": 3,
+                "typeName": "耳机"
+            }
+        ]
+    }
+]
