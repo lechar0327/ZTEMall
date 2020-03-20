@@ -1,0 +1,632 @@
+@import "reset";
+@import "base";
+
+.container{
+    width: 1240px;
+    margin: 0 auto;
+}
+
+.active{
+    border:1px solid red !important ;
+}
+
+label{
+    display:inline-block;
+    float:left;
+    width: 66px;
+    height: 20px;
+    margin-top: 2px;
+    padding-top: 4px;
+    box-sizing: border-box;
+    text-align: justify;
+    max-width: 100%;
+    font-weight: 700;
+    font-size: 14px;
+    text-align-last:justify;
+    text-align:justify;
+    text-justify:distribute-all-lines; // 这行必加，兼容ie浏览器
+}
+
+.index-wrap{
+    width:100%;
+    height: 40px;
+    background: #f8f8f8;
+
+    .l-top{
+        @extend .container;
+        height: 40px;
+        padding:0 15px 0 10px;
+        box-sizing: border-box;
+
+        .t-left{
+            float:left;
+           
+            a{
+                margin: 0 10px;
+                line-height: 40px;
+            }
+            a:hover{
+                color:#000;
+            }
+        }
+        .t-right{
+            float: right;
+            position: relative;
+            a{
+                margin: 0 10px;
+                line-height: 40px;
+                img{
+                    vertical-align: middle;
+                }
+            }
+            a:hover{
+                color:#000;
+            }
+
+   
+            .cartTips{
+                width: 314px;
+                height: 60px;
+                border:1px solid #ededed;
+                background: #fff;
+                position: absolute;
+                top:40px;
+                right: -10px;
+                line-height: 60px;
+                text-align: center;
+                img{
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}
+
+.nav-wrap{
+    width: 100%;
+    height: 85px;
+    background: #ffffff;
+    position: relative;
+    .i-nav{
+        overflow: hidden;
+        padding:0 15px 0 10px;
+        box-sizing: border-box;
+        .logo{
+            width: 180px;
+            height: 85px;
+            line-height: 85px;
+            float: left;
+            a{
+                display: block;
+                text-indent: -9999px;
+                background: url(../images/ZTE-logo.png) no-repeat center;
+            }
+        }
+        .nav{
+            float: left;
+            width: 834px;
+            height: 85px;
+            line-height: 85px;
+            
+            ul{
+                height: 85px;
+                margin-left: 170px;
+                li{
+                    float: left;
+                    margin: 0 15px;
+                    a{
+                        font-size: 14px;
+                        color:#333;
+                    }
+                    a:hover{
+                        color:rgb(82,149,222)
+                    }
+                    
+                }
+            }
+            .detail-block{
+                position: absolute;
+                width: 100%;
+                height: 228px;
+                top:85px;
+                left:0px;
+                background: #fff;
+                z-index:999;
+                ul{
+                    height: 228px; 
+                    li{
+                        margin: 0px;
+                        float: left;
+                        width:205px;
+                        height: 228px;
+                        overflow: hidden;
+                        text-align: center;
+                        .detail-img{
+                            margin-top: 20px;
+                            width: 204px;
+                            height: 140px;
+                            margin: 0;
+                            line-height: 140px;
+                            text-align: center;
+                            border-left:1px solid rgb(224,224,224);
+                            img{
+                                width: 140px;
+                                height: 140px;
+                                vertical-align: middle;
+                            }
+                          
+                         }
+                        
+                         .details{
+                            margin-top: 10px;
+                            .d-title{
+                                color:#333;
+                                font-size: 12px;
+                            }
+                            p{
+                                padding:0 15px;
+                                overflow: hidden;/*超出部分隐藏*/
+                                text-overflow:ellipsis;/* 超出部分显示省略号 */
+                                white-space: nowrap;/*规定段落中的文本不进行换行 */
+                                height: 24px;
+                                line-height: 24px;
+                                text-align: center;
+                            }
+
+                            .d-price{
+                                color:red;
+                                strong{
+                                    font-weight: 600;
+                                    font-size: 14px;
+                                }
+                                del{
+                                    color:#333;
+                                    margin-left: 2px;
+                                    font-size: 12px;
+                                    text-decoration: line-through;
+                                }
+                               
+                            }
+                        }
+                    }
+                    li:hover{
+                        position: relative;
+                        top:-4px;
+                        // box-shadow: 0 0 20px #ccc;
+                     }
+                }
+            }
+           
+        }
+        .search{
+            float:left;
+            width: 190px;
+            height: 85px;
+            line-height: 85px;
+            position: relative;
+            input{
+                border:1px solid #b8b8b8;
+                width: 190px;
+                height: 36px;
+                padding:0 12px;
+                box-sizing: border-box;
+                font-size: 14px;
+            }
+            button{
+                position: absolute;
+                width: 50px;
+                height: 34px;
+                left:138px;
+                top:25px;
+                background: #fff;
+                cursor: pointer;
+            }
+          
+        }
+    }
+}
+
+.guide-wrap{
+    width:100%;
+    height: 122px;
+    background: #f5f5f5;
+    .i-guide{
+        height: 122px;
+        line-height: 122px;
+        padding-left: 20px;
+        box-sizing: border-box;
+        a{
+            font-size: 14px;
+        }
+        span{
+            color: #999;
+            margin:0 6px;
+        }
+        em{
+            color: #999;
+            font-size: 14px; 
+        }
+    }
+}
+
+.main-warp{
+    width: 100%;
+    .m-inner{
+        height: 890px;
+        .img-block{
+            width:550px;
+            height: 506px;
+            margin-top: 10px;
+            float: left;
+            .main-img{
+                margin-left: 45px;
+                .smallImg{
+                    width: 400px;
+                    height: 400px;
+                    position: absolute;
+                    left: 230px;
+                    top: 270px;
+                }
+                .smallImg img{
+                    width:100%;
+                    height: 100%;
+                    vertical-align: middle;
+                }
+
+                .bigImg {
+                    width: 500px;
+                    height:500px;
+                    position: absolute;
+                    top: 250px;
+                    left: 650px;
+                    overflow: hidden;
+                    display: none;
+                    z-index:99;
+                }
+
+                .bigImg img{
+                    width:800px;
+                    height: 800px;
+                    vertical-align: middle;
+                    position: absolute;
+                }
+
+                #mark {
+                    width: 100px;
+                    height: 100px;
+                    background-color: black;
+                    position: absolute;
+                    opacity: 0.5;
+                    filter: aplha(opacity=50);
+                    left: 0px;
+                    top: 0px;
+                    display: none;
+                }
+            }
+
+            .pic-slide{
+                width: 490px;
+                height: 70px;
+                position: absolute;
+                left: 190px;
+                top: 700px;
+                .pic-pre{
+                    width: 20px;
+                    position: absolute;
+                    left: 10px;
+                    height: 40px;
+                    line-height: 40px;
+                    top: 25px;
+                    text-align: center;
+                    cursor: pointer;
+                }
+                .pic-list{
+                    width: 420px;
+                    height: 88px;
+                    margin: 0 auto;
+                    padding: 0;
+                    overflow-x:hidden;
+                    
+                    ul{
+                        width:2400px;
+                        height: 70px;
+                        margin: 0;
+                        padding: 0;
+                        li{
+                            float: left;
+                            width: 68px;
+                            height: 68px;
+                            padding: 0 8px;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                border:1px solid #ccc;
+                            }
+                        }    
+                    } 
+                }
+                .pic-next{
+                    width: 20px;
+                    position: absolute;
+                    right: 10px;
+                    height: 40px;
+                    line-height: 40px;
+                    top: 25px;
+                    text-align: center;
+                    cursor: pointer;
+                }
+            
+            }
+        }
+
+        .details-block{
+            width:615px;
+            height: 817px;
+            float: left;
+            h1{
+                margin-top: 10px;
+                height: 56px;
+                line-height: 56px;
+            }
+            em{
+                height: 26px;
+                color:#fc6666;
+                font-size: 16px;
+            }
+            p{
+                margin-top: 10px;
+                line-height: 30px;
+                font-size: 14px;
+                color:#666666;
+            }
+            .prod-price{
+                height: 80px;
+                line-height: 80px;
+                font-size: 30px;
+                color:#fc6628;
+                font-weight: 900px;
+                border-bottom: 2px solid #eeeeee;
+            }
+            .sales-promotion{
+                width:100%;
+                overflow: hidden;
+                .dl-horizontal{
+                    width:100%;
+                    height: 70px;
+                  
+                    ul {
+                        margin-bottom: 10px;
+                        float:left;
+                        li{
+                            display: list-item;
+                            text-align: -webkit-match-parent;
+                            span{
+                                display: inline-block;
+                                background-color: #fc6628;
+                                height: 16px;
+                                line-height: 16px;
+                                border-radius: 2px;
+                                padding: 0 5px;
+                                text-align: center;
+                                color: #fff;
+                                margin:8px;
+                                box-sizing: border-box;
+                                border: none;
+                            }
+                            .plist-block{
+                                display: inline-block;
+                                img{
+                                    width:30px;
+                                    height: 30px;
+                                    vertical-align: middle;
+                                }
+                                i{
+                                    color:#333;
+                                }
+                                .countdown{
+                                    display: inline-block;
+                                    span{
+                                        display: inline-block;
+                                        width:34px;
+                                        height: 22px;
+                                        background: rgb(240,19,50);
+                                        line-height: 22px;
+                                        text-align: center;
+                                        color:#fff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .product-spec{
+                margin-bottom: 20px;
+                .product-sku{
+                    height: 62px;
+                   
+                    ul{
+                        float:left;
+                        margin-left: 20px;
+                        li{
+                            float:left;
+                            border: 1px #e9e9e9 solid;
+                            color: #767676;
+                            min-width: 50px;
+                            max-height: 50px;
+                            margin-right: 9px;
+                            padding:0 20px;
+                            box-sizing: border-box;
+                            cursor: pointer;
+                            span{
+                                display: block;
+                                max-height: 50px;
+                                line-height: 50px;
+                                font-size:14px;
+                            }
+                            
+                        }
+                        .current{
+                            border: 1px #fc6628 solid; 
+                            color: #fc6628;
+                        }
+                        .nocurrent:hover{
+                             color:#333;
+                        }
+                    }
+                }
+            }
+
+            .product-area{
+                height: 90px;
+                margin-bottom: 20px;
+            
+                .product-hb{
+                    display:inline-block;
+                    height: 60px; 
+                    margin-left: 20px;
+                    ul li{
+                        float:left;
+                        border: 1px #e9e9e9 solid;
+                        color: #767676;
+                        height: 60px;
+                        margin-right: 10px;
+                        padding:10px 20px;
+                        box-sizing: border-box;
+                        cursor: pointer;
+                        text-align: center;
+                        span{
+                            display: block;
+                            font-size:14px;
+                            text-align: center;
+                            color: #767676;
+                        }
+                        em{
+                            font-size:14px;
+                            text-align: center;
+                        }
+                       
+                    }
+                    .current-hb{
+                       border: 1px #fc6628 solid; 
+                       color: #fc6628;
+                    }
+                    .more-periods em{
+                        color:#767676;
+                    }
+
+                }
+
+            }
+
+            .product-buy{
+                height: 34px;
+                margin-bottom: 20px; 
+                .buy-add-sub{
+                    float: left;
+                    margin-left: 20px;
+                    div{
+                        float: left;
+                        height: 32px;
+                        border:1px solid #ccc;
+                        line-height: 32px;
+                        text-align: center;
+                        color:#ccc;
+                        cursor: pointer;
+                    }
+                    .sub{
+                       width: 30px;
+                       font-size:20px;
+                    }
+                    .buyValue{
+                        width: 130px;
+                        border-left: none;
+                        border-right: none;
+                        input{
+                            width: 100%;
+                            height: 100%;
+                            text-align: center;
+                            color:#333;
+                        }
+                    }
+                    .add{
+                        width: 30px;
+                        font-size:20px;
+                    }
+                }
+            }
+
+            .buycat-box{
+                height: 70px;
+                padding:10 0px;
+                box-sizing: border-box;
+                a{
+                    display: block;
+                    float:left;
+                    width: 125px;
+                    height: 50px;
+                    line-height: 50px;
+                    text-align: center;
+                }
+                .btn-danger{
+                    margin-right: 15px;
+                    position: relative;
+                    background-color: #ffeded;
+                    border: 1px solid #fc6628;
+                    color: #fc6628;
+                    border-radius: 0px;
+                    font-size: 16px;
+                    font-family: 'Microsoft Yahei';
+                }
+
+                .btn-danger:hover{
+                    background: rgb(236,79,15);
+                    color:#fff;
+                }
+
+                .btn-success{
+                    margin-right: 15px;
+                    overflow: hidden;
+                    position: relative;
+                    width: 125px;
+                    background-color: #fc6628;
+                    border: 1px solid #fc6628;
+                    color: #fff;
+                    font-size: 16px;
+                    border-radius: 0px;
+                }
+
+                .btn-success:hover{
+                    background: rgb(176,34,14);
+                }
+                
+                .code-buy{
+                    position: relative;
+                    display: inline-block;
+                    width: 90px;
+                    height: 52px;
+                    line-height: 52px;
+                    img{
+                        width:20px;
+                        height: 20px;
+                        vertical-align: middle;
+                        margin-right: 6px;
+                    }
+                }
+                .like-buy{
+                    display: inline-block;
+                    width: 90px;
+                    height: 52px;
+                    line-height: 52px;
+                    img{
+                        width:20px;
+                        height: 20px;
+                        vertical-align: middle;
+                        margin-right: 6px;
+                    }
+                }
+            }
+        }
+    }
+}

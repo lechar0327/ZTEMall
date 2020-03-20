@@ -1,9 +1,11 @@
 [
     {
+        "productId":1,
         "imgsrc": "images/hot01.jpg",
         "link": "https://www.myzte.com/a10pro-5g.html"
     },
     {
+        "productId":2,
         "imgsrc": "images/hot02.jpg",
         "link": "https://www.myzte.com/item-2325.html"
     }

@@ -240,7 +240,8 @@ define(["ajax"], function ($) {
                 var data = JSON.parse(msg);
                 for (var i = 0; i < data.length; i++) {
                     var oA = document.createElement("a");
-                    oA.href = data[i].link;
+                    oA.href = "/details.html?productId="+data[i].productId;
+
 
                     var oI = document.createElement("img");
                     oI.src = data[i].imgsrc;

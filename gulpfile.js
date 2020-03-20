@@ -84,6 +84,28 @@ gulp.task("indexscss", function () {
         .pipe(connect.reload());
 })
 
+//打包处理详情页的css
+gulp.task("detailscss", function () {
+    return gulp.src("css/scss/details.{sass,scss}")
+        .pipe(scss({ outputStyle: 'compact' }).on('error', handleErrors)) // 用我们自己写的handleErrors替代处理错误
+        .pipe(gulp.dest("dist/css"))
+        .pipe(minifyCss())
+        .pipe(rename("details.min.css"))
+        .pipe(gulp.dest("dist/css"))
+        .pipe(connect.reload());
+})
+
+//打包处理购物车的css
+gulp.task("Catcss", function () {
+    return gulp.src("css/scss/shoppingCat.{sass,scss}")
+        .pipe(scss({ outputStyle: 'compact' }).on('error', handleErrors)) // 用我们自己写的handleErrors替代处理错误
+        .pipe(gulp.dest("dist/css"))
+        .pipe(minifyCss())
+        .pipe(rename("shoppingCat.min.css"))
+        .pipe(gulp.dest("dist/css"))
+        .pipe(connect.reload());
+})
+
 
 
 //登录JS
@@ -128,6 +150,27 @@ gulp.task("copybannerJs", function () {
         .pipe(connect.reload());
 });
 
+//详情页JS
+gulp.task("copydetailJs", function () {
+    return gulp.src("js/details.main.js")
+        .pipe(gulp.dest("dist/js"))
+        .pipe(uglify())
+        .pipe(rename("details.main.min.js"))
+        .pipe(gulp.dest("dist/js"))
+        .pipe(connect.reload());
+});
+
+//购物车js
+gulp.task("shoppingCatJs", function () {
+    return gulp.src("js/shoppingCat.main.js")
+        .pipe(gulp.dest("dist/js"))
+        .pipe(uglify())
+        .pipe(rename("shoppingCat.main.min.js"))
+        .pipe(gulp.dest("dist/js"))
+        .pipe(connect.reload());
+});
+
+
 // 打包所有js到dist目录
 gulp.task("copyJs", function () {
     return gulp.src(["js/*.js", "!gulpfile.js", "!handleErrors.js"])
@@ -143,12 +186,17 @@ gulp.task("build", [
     "copycss",
     "loginscss",
     "registerscss",
+    "detailscss",
+    "Catcss",
     "copyregisterJs",
     "copyloginJs",
     "copyindexJs",
     "indexscss",
     "copybannerJs",
     "copyJs",
+    "copydetailJs",
+    "shoppingCatJs"
+
 ], function () {
     console.log("全部构建成功");
 });
@@ -164,13 +212,18 @@ gulp.task("watch", function () {
     gulp.watch("css/scss/login.{sass,scss}", ["loginscss"]);
     gulp.watch("css/scss/register.{sass,scss}", ["registerscss"]);
     gulp.watch("css/scss/index.{sass,scss}", ["indexscss"]);
+    gulp.watch("css/scss/shoppingCat.{sass,scss}", ["Catcss"]);
 
+    gulp.watch("css/scss/details.{sass,scss}", ["detailscss"]);
     gulp.watch("js/login.main.js", ["copyloginJs"]);
     gulp.watch("js/register.main.js", ["copyregisterJs"]);
     gulp.watch("js/index.main.js", ["copyindexJs"]);
     gulp.watch("js/banner.js", ["copyBannerJs"]);
+    gulp.watch("js/details.main.js", ["copydetailJs"]);
     gulp.watch(["js/*.js"], ["copyJs"]);
-
+    gulp.watch("js/shoppingCat.main.js", ["shoppingCatJs"]);
+    
+    
 });
 //gulp-connect 本地启动一个服务器
 const connect = require("gulp-connect");
